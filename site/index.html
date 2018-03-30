@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
@@ -14,16 +15,98 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        
-        <a class="navbar-brand" href="#">Navbar</a>
-        
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" href="#">
+            <img src="./img/logo_DC_branco.png" width="80" alt="Logo do departamento de computação">
+        </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <!-- Ensino -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ensino</a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Graduação</a>
+                        <a class="dropdown-item" href="#">Pós-graduação</a>
+                    </div>
+                </li>
+
+                <!-- Pesquisa -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pesquisa</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Catálogo</a>
+                        <a class="dropdown-item" href="#">Laboratórios</a>
+                    </div>
+                </li>
+
+                <!-- Extensao -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Extensão</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Grupos</a>
+                        <a class="dropdown-item" href="#">Projetos e ações</a>
+                    </div>
+                </li>
+
+                <!-- Pessoas -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pessoas</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Alunos</a>
+                        <a class="dropdown-item" href="#">Docentes</a>
+                        <a class="dropdown-item" href="#">Funcionários</a>
+                        <a class="dropdown-item" href="#">Colaboradores</a>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                <!-- Institucional -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Institucional</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Sobre</a>
+                        <a class="dropdown-item" href="#">Contato</a>
+                    </div>
+                </li>
+                <!-- Suporte -->
+                <li class="nav-item">
+                    <a class="btn btn-outline-light" href="#">Suporte</a>
+                </li>
+            </ul>
+        </div>
+
     </nav>
+
+    <header class="cover-full">
+        <img class="cover-logo" src="./img/logo_DC_branco.png" width="200px" alt="">
+        
+        <div class="d-flex h-100 align-items-end">
+            <div class="areas container-fluid">
+                <div class="row text-center">
+                    <div id="area_visitante" class="area col">
+                        <h3>Área do Visitante</h3>
+                    </div>
+                    <div id="area_docente" class="area col">
+                        <h3>Área do Docente</h3>
+                    </div>
+                    <div id="area_aluno" class="area col">
+                        <h3>Área do Aluno</he>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
 
     <main role="main" class="container">
         <h1>Main Content</h1>

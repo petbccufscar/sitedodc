@@ -1,0 +1,60 @@
+/* Cover section */
+.cover-full {
+    height: 100vh;
+    /* background-color: #555; */
+
+    background-image: url('../img/back.jpg');
+    background-size: cover;
+
+}
+
+.cover-half {
+    height: 50vh;
+    background-color: #555;
+
+}
+
+.cover-logo{
+    position: absolute;
+    margin: auto;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.areas{
+    background:rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.area{
+    padding: 20px;
+}
+
+#area_visitante:hover{
+    background: orange;
+}
+
+#area_docente{
+    border: white;
+    border-style: none solid;
+    border-width: 0.5px;
+}
+#area_docente:hover{
+    background: green;
+}
+
+#area_aluno:hover{
+    background: red;
+}
+
+/* nav-bar */
+
+.navbar-nav > li {
+    padding: 0 15px;
+}
+
+
+
