@@ -1,10 +1,22 @@
 /* Cover section */
 .cover-full {
     height: 100vh;
-    background-image: url('../img/back.jpg');
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 
     margin-bottom: 30px;
+}
+
+.navbar{
+    background: black;
+    color: white;
+}
+
+.navbar .nav-link{
+    color: white;
 }
 
 .cover-half {
@@ -15,7 +27,7 @@
 
 }
 
-.carousel-item {
+.cover-full .carousel-item {
     height: 100vh;
     min-height: 300px;
     background: no-repeat center center scroll;
@@ -36,7 +48,7 @@
     left: 0;
 }
 
-.carousel-caption {
+.cover-full .carousel-caption {
     text-align: left;
     margin-bottom: 50px;
     position: absolute;
@@ -44,7 +56,7 @@
     right: auto;
 }
 
-.carousel-caption span {
+.cover-full .carousel-caption span {
     background-color: black;
     padding: 15px;
 }
@@ -80,7 +92,41 @@
 }
 
 .card{
-    margin-right: 10px;
+    border-radius: 0px;
+    margin: 0 10px 20px 10px;
 }
 
+#noticias-carousel .carousel-item {
+    height: 400px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
+#noticias-carousel .carousel-caption {
+    left:0;
+	right:0;
+	bottom:0;
+	text-align:left;
+	padding:10px;
+	background:rgba(0,0,0,0.6);
+	text-shadow:none;
+}
+
+#noticias-thumb > div{
+    height: 100px;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+#noticias-thumb > div:hover{
+    background: black;
+}
+
+#noticias-thumb .active{
+    background:black;
+    color: white;
+}

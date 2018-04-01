@@ -18,10 +18,10 @@
 
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg">
 
         <a class="navbar-brand" href="#">
-            <img src="./img/logo_DC_branco.png" width="80" alt="Logo do departamento de computação">
+            <img src="./img/logo_DC_branco.png" width="60" alt="Logo do departamento de computação">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -167,26 +167,59 @@
 
 
     <main role="main" class="container">
-        <h1>Agenda</h1>
-        <hr>
 
-        <div class="row">
-            <div class="col">
+        <div class="section">
+            <h1>Agenda</h1>
+            <hr>
 
-            </div>
+            <div class="row justify-content-center">
 
-            <div class="col border-left d-flex">
-                <div class="card" style="width: 10rem; border-color:rgb(4, 163, 184); border-style:solid">
-                    <div class="card-img-top text-center text-light" style="background: rgb(4, 163, 184); padding:20px;">
+                <div class="card border-right" style="width: 10rem;">
+
+                    <div class="card-body text-center text-info">
                         <h1>15/04</h1>
                         <h6>
-                            <i class="fas fa-clock"></i> 9h00</h6>
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="card-text">SECOMP</h5>
+                            <i class="fas fa-clock"></i> 9:00 - 12:00</h6>
+                        <hr class="text-light">
+                        <h5>SECOMP</h5>
                     </div>
                 </div>
-                <div class="card" style="width: 10rem; border-color:rgb(33, 161, 21); border-style:solid">
+
+                <div class="card border-right" style="width: 10rem;">
+
+                    <div class="card-body text-center text-primary">
+                        <h1>15/04</h1>
+                        <h6>
+                            <i class="fas fa-clock"></i> 9:00 - 12:00</h6>
+                        <hr>
+                        <h5>SECOMP</h5>
+                    </div>
+                </div>
+
+                <div class="card border-right" style="width: 10rem;">
+
+                    <div class="card-body text-center text-danger">
+                        <h1>15/04</h1>
+                        <h6>
+                            <i class="fas fa-clock"></i> 9:00 - 12:00</h6>
+                        <hr>
+                        <h5>SECOMP</h5>
+                    </div>
+                </div>
+
+
+                <div class="card" style="width: 10rem;">
+
+                    <div class="card-body text-center text-success">
+                        <h1>15/04</h1>
+                        <h6>
+                            <i class="fas fa-clock"></i> 9:00 - 12:00</h6>
+                        <hr>
+                        <h5>SECOMP</h5>
+                    </div>
+                </div>
+
+                <!-- <div class="card" style="width: 10rem; border-color:rgb(33, 161, 21); border-style:solid">
                     <div class="card-img-top text-center text-light" style="background: rgb(33, 161, 21); padding:20px;">
                         <h1>15/04</h1>
                         <h6>
@@ -196,6 +229,7 @@
                         <h5 class="card-text">SECOMP</h5>
                     </div>
                 </div>
+
                 <div class="card" style="width: 10rem; border-color:rgb(224, 95, 20); border-style:solid">
                     <div class="card-img-top text-center text-light" style="background: rgb(224, 95, 20); padding:20px;">
                         <h1>15/04</h1>
@@ -207,31 +241,232 @@
                     </div>
                 </div>
 
+                <div class="card" style="width: 10rem; border-color:rgb(4, 163, 184); border-style:solid">
+                    <div class="card-img-top text-center text-light" style="background: rgb(4, 163, 184); padding:20px;">
+                        <h1>15/04</h1>
+                        <h6>
+                            <i class="fas fa-clock"></i> 9h00</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-text">SECOMP</h5>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 10rem; border-color:rgb(33, 161, 21); border-style:solid">
+                    <div class="card-img-top text-center text-light" style="background: rgb(33, 161, 21); padding:20px;">
+                        <h1>15/04</h1>
+                        <h6>
+                            <i class="fas fa-clock"></i> 9h00</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-text">SECOMP</h5>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 10rem; border-color:rgb(224, 95, 20); border-style:solid">
+                    <div class="card-img-top text-center text-light" style="background: rgb(224, 95, 20); padding:20px;">
+                        <h1>15/04</h1>
+                        <h6>
+                            <i class="fas fa-clock"></i> 9h00</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-text">SECOMP</h5>
+                    </div>
+                </div> -->
             </div>
         </div>
 
-        <h1>Notícias</h1>
-        <hr>
-        <div class="row">
-            <div class="col">
 
-            </div>
+        <div class="section">
+            <h1>Notícias</h1>
+            <hr>
+            <div class="row no-gutters">
+                <div class="col">
+                    <div id="noticias-carousel" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
 
-            <div class="col-6">
+                            <div class="carousel-item active" style="background-image: url('./img/header/c4.jpg')">
 
+                                <div class="carousel-caption">
+                                    <h4>
+                                        Notícia 1
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End Item -->
+
+                            <div class="carousel-item" style="background-image: url('./img/header/c1.jpg')">
+
+                                <div class="carousel-caption">
+                                    <h4>
+                                        Notícia 2
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End Item -->
+
+                            <div class="carousel-item" style="background-image: url('./img/header/c2.jpg')">
+
+                                <div class="carousel-caption">
+                                    <h4>
+                                        Notícia 2
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End Item -->
+
+                            <div class="carousel-item" style="background-image: url('./img/header/c3.jpg')">
+
+                                <div class="carousel-caption">
+                                    <h4>
+                                        Notícia 2
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End Item -->
+
+                        </div>
+                        <!-- End Carousel Inner -->
+
+
+                        <!-- Controls -->
+                        <div class="carousel-controls">
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#noticias-carousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#noticias-carousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- End Carousel -->
+                </div>
+
+                <div id="noticias-thumb" class="col-4 no-gutters d-flex flex-column justify-content-between bg-dark text-light">
+
+                    <div data-target="#noticias-carousel" data-slide-to="0" class="active border-bottom">
+                        <h4>Notícia 1</h4>
+                        <p>Alguma descrição aqui</p>
+                    </div>
+
+                    <div data-target="#noticias-carousel" data-slide-to="1" class="border-bottom">
+                        <h4>Notícia 2</h4>
+                        <p>Alguma descrição aqui</p>
+                    </div>
+
+                    <div data-target="#noticias-carousel" data-slide-to="2" class="border-bottom">
+                        <h4>Notícia 3</h4>
+                        <p>Alguma descrição aqui</p>
+                    </div>
+
+                    <div data-target="#noticias-carousel" data-slide-to="3">
+                        <h4>Notícia 4</h4>
+                        <p>Alguma descrição aqui</p>
+                    </div>
+                </div>
             </div>
 
         </div>
+
 
     </main>
 
-    <footer class="container">
-        <h1>Footer</h1>
+    <!-- <footer class="footer mt-4 p-2 border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img class="img-fluid float-right" width="150px" src="./img/logo_DC_original.png" alt="">
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col">
+                    <img class="img-fluid float-left" width="150px" src="./img/logo_ufscar.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer> -->
+
+    <footer class="page-footer font-small blue pt-4 mt-4">
+
+
+        <!--Footer Links-->
+        <div class="container mt-5 mb-4 text-center text-md-left">
+            <div class="row mt-3">
+
+                <div class="col-md-6 col-lg-3 col-xl-8">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>Contato</strong>
+                    </h6>
+                    <hr class="mb-3 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
+                    <p>
+                        <i class="fa fa-envelope mr-3"></i> info@example.com</p>
+                    <p>
+                        <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <p>
+                        <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-4 d-flex justify-content-between align-items-center">
+                    <div>
+                        <img width="150px" src="./img/logo_DC_original.png" alt="">
+                    </div>
+
+                    <div>
+                        <img width="150px" src="./img/logo_ufscar.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!--/.Footer Links-->
+
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3 text-center">
+            © 2018 Copyright:
+            <a href="http://petbcc.dc.ufscar.br"> PET-BCC UFSCar </a>
+        </div>
+        <!--/.Copyright-->
+
     </footer>
 
 </body>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        var noticias_carousel = $('#noticias-carousel');
+        var thumbnails = document.getElementById("noticias-thumb").children;
+
+        noticias_carousel.on('slide.bs.carousel', function (data) {
+            thumbnails[data.from].classList.remove('active');
+            thumbnails[data.to].classList.add('active');
+        });
+    })
+</script>
 
 </html>
