@@ -91,9 +91,28 @@
     padding: 0 15px;
 }
 
-.card{
+/* Agenda */
+.evento {
+    max-width: 300px;
     border-radius: 0px;
     margin: 0 10px 20px 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+.evento:hover{
+    background: black;
+    color: white;
+}
+
+.evento-data{
+    padding: 10px;
+    float: left;
+    min-width: 130px;
+}
+
+.evento-corpo{
+    padding: 10px;
 }
 
 #noticias-carousel .carousel-item {
