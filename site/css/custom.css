@@ -4,6 +4,25 @@ main.container {
 
 /* nav-bar */
 
+.navbar{
+    background: black;
+    color: white;
+}
+
+.navbar .nav-link{
+    color: white;
+}
+
 .navbar-nav > li {
     padding: 0 15px;
+}
+
+/* Footer */
+.footer {
+    font-size: 0.8rem
+
+}
+
+.footer p{
+    margin: 0;
 }
