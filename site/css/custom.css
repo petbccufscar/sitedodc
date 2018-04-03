@@ -1,0 +1,9 @@
+main.container {
+  padding: 100px 15px;
+}
+
+/* nav-bar */
+
+.navbar-nav > li {
+    padding: 0 15px;
+}
