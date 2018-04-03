@@ -2,6 +2,10 @@ main.container {
   padding: 100px 15px;
 }
 
+.card-body p{
+  margin: 0;
+}
+
 /* nav-bar */
 
 .navbar{
