@@ -1,5 +1,39 @@
+/*pagination*/
+.page-link {
+  color: #333;
+  background-color: #FFF;
+  border: 1px solid #000;
+}
+
+.page-item.disabled .page-link {
+  color: #333;
+  cursor: auto;
+  background-color: #EEE;
+  border-color: #000;
+
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #111;
+  border-color: #000;
+}
+
+.page-link:focus, .page-link:hover {
+  color: #000;
+  background-color: #CCC;
+  border-color: #000;
+}
+
+/*breadcrumb*/
+.breadcrumb a {
+  color: black;
+}
+
+/* ajustes de espaçamento */
 main.container {
-  padding: 100px 15px;
+  padding: 100px 15px 15px 15px;
 }
 
 .card-body p{
@@ -7,7 +41,6 @@ main.container {
 }
 
 /* nav-bar */
-
 .navbar{
     background: black;
     color: white;

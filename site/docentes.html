@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+  <!-- nav bar-->
   <nav class="navbar fixed-top navbar-expand-lg">
 
       <a class="navbar-brand" href="#">
@@ -60,7 +60,7 @@
 
               <!-- Pessoas -->
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pessoas</a>
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="pessoas.html" role="button" aria-haspopup="true" aria-expanded="false">Pessoas</a>
                   <div class="dropdown-menu">
                       <a class="dropdown-item" href="alunos.html">Alunos</a>
                       <a class="dropdown-item" href="docentes.html">Docentes</a>
@@ -87,12 +87,12 @@
       </div>
   </nav>
 
-<main class="container">
+  <main class="container">
   <!--breadcrumb-->
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item" aria-current="page">Home</li>
-      <li class="breadcrumb-item" aria-current="page">Pessoas</li>
+      <li class="breadcrumb-item" aria-current="page"><a href="#">Home</a></li>
+          <li class="breadcrumb-item" aria-current="page"><a href="pessoas.html">Pessoas</a></li>
       <li class="breadcrumb-item active" aria-current="page">Docentes</li>
     </ol>
   </nav>
@@ -112,7 +112,7 @@
         <div class="card-body">
           <row class="row">
             <div class="col-sm-3">
-              <img src="img/avatar.png" class="rounded float-left img-fluid" alt="..." style="max-width: 75%; max-height: 75%;">
+              <img src="img/avatar.png" class="rounded mx-auto d-block" alt="..." style="max-width: 75%; max-height: 75%;">
             </div>
             <div class="col-sm-9">
             <p class="card-text">
@@ -139,7 +139,7 @@
         <div class="card-body">
           <row class="row">
             <div class="col-sm-3">
-              <img src="img/avatar.png" class="rounded float-left img-fluid" alt="..." style="max-width: 75%; max-height: 75%;">
+              <img src="img/avatar.png" class="rounded mx-auto d-block" alt="..." style="max-width: 75%; max-height: 75%;">
             </div>
             <div class="col-sm-9">
             <p class="card-text">
@@ -166,7 +166,7 @@
         <div class="card-body">
           <row class="row">
             <div class="col-sm-3">
-              <img src="img/avatar.png" class="rounded float-left img-fluid" alt="..." style="max-width: 75%; max-height: 75%;">
+              <img src="img/avatar.png" class="rounded mx-auto d-block" alt="..." style="max-width: 75%; max-height: 75%;">
             </div>
             <div class="col-sm-9">
             <p class="card-text">
@@ -193,7 +193,7 @@
         <div class="card-body">
           <row class="row">
             <div class="col-sm-3">
-              <img src="img/avatar.png" class="rounded float-left img-fluid" alt="..." style="max-width: 75%; max-height: 75%;">
+              <img src="img/avatar.png" class="rounded mx-auto d-block" alt="..." style="max-width: 75%; max-height: 75%;">
             </div>
             <div class="col-sm-9">
             <p class="card-text">
@@ -220,7 +220,7 @@
         <div class="card-body">
           <row class="row">
             <div class="col-sm-3">
-              <img src="img/avatar.png" class="rounded float-left img-fluid" alt="..." style="max-width: 75%; max-height: 75%;">
+              <img src="img/avatar.png" class="rounded mx-auto d-block" alt="..." style="max-width: 75%; max-height: 75%;">
             </div>
             <div class="col-sm-9">
             <p class="card-text">
@@ -247,7 +247,7 @@
         <div class="card-body">
           <row class="row">
             <div class="col-sm-3">
-              <img src="img/avatar.png" class="rounded float-left img-fluid" alt="..." style="max-width: 75%; max-height: 75%;">
+              <img src="img/avatar.png" class="rounded mx-auto d-block" alt="..." style="max-width: 75%; max-height: 75%;">
             </div>
             <div class="col-sm-9">
             <p class="card-text">
@@ -267,9 +267,27 @@
         </div>
       </div>
     </div>
-
-
     </row>
+
+   <!-- pagination -->
+    <nav aria-label="...">
+      <ul class="pagination justify-content-center border-dark mt-2">
+        <li class="page-item disabled">
+          <span class="page-link">Anterior</span>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item">
+          <span class="page-link">
+            2
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Próximo</a>
+        </li>
+      </ul>
+    </nav>
 
     </main>
 
