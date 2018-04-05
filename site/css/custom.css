@@ -1,15 +1,46 @@
-/* Cover section */
-.cover-full {
-    height: 100vh;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    margin-bottom: 30px;
+/*pagination*/
+.page-link {
+  color: #333;
+  background-color: #FFF;
+  border: 1px solid #000;
 }
 
+.page-item.disabled .page-link {
+  color: #333;
+  cursor: auto;
+  background-color: #EEE;
+  border-color: #000;
+
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #111;
+  border-color: #000;
+}
+
+.page-link:focus, .page-link:hover {
+  color: #000;
+  background-color: #CCC;
+  border-color: #000;
+}
+
+/*breadcrumb*/
+.breadcrumb a {
+  color: black;
+}
+
+/* ajustes de espaçamento */
+main.container {
+  padding: 100px 15px 15px 15px;
+}
+
+.card-body p{
+  margin: 0;
+}
+
+/* nav-bar */
 .navbar{
     background: black;
     color: white;
@@ -19,135 +50,8 @@
     color: white;
 }
 
-.cover-half {
-    height: 50vh;
-    background-image: url('../img/back.jpg');
-
-    margin-bottom: 30px;
-
-}
-
-.cover-full .carousel-item {
-    height: 100vh;
-    min-height: 300px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.cover-logo{
-    position: absolute;
-    margin: auto;
-    /* z-index: 1; */
-
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.cover-full .carousel-caption {
-    text-align: left;
-    margin-bottom: 50px;
-    position: absolute;
-    left: 0;
-    right: auto;
-}
-
-.cover-full .carousel-caption span {
-    background-color: black;
-    padding: 15px;
-}
-
-.areas{
-    background:rgba(0, 0, 0, 0.8);
-    color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.area{
-    padding: 20px;
-}
-
-#area_visitante:hover{
-    background: orange;
-}
-
-#area_docente:hover{
-    background: green;
-}
-
-#area_aluno:hover{
-    background: red;
-}
-
-/* nav-bar */
-
 .navbar-nav > li {
     padding: 0 15px;
-}
-
-/* Agenda */
-.evento {
-    max-width: 300px;
-    border-radius: 0px;
-    margin: 0 10px 20px 10px;
-    display: flex;
-    cursor: pointer;
-}
-
-.evento:hover{
-    background: black;
-    color: white;
-}
-
-.evento-data{
-    padding: 10px;
-    float: left;
-    min-width: 130px;
-}
-
-.evento-corpo{
-    padding: 10px;
-}
-
-#noticias-carousel .carousel-item {
-    height: 400px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-#noticias-carousel .carousel-caption {
-    left:0;
-	right:0;
-	bottom:0;
-	text-align:left;
-	padding:10px;
-	background:rgba(0,0,0,0.6);
-	text-shadow:none;
-}
-
-#noticias-thumb > div{
-    height: 100px;
-    padding: 10px;
-    cursor: pointer;
-    
-}
-
-#noticias-thumb > div:hover{
-    background: black;
-}
-
-#noticias-thumb .active{
-    background:black;
-    color: white;
 }
 
 /* Footer */
