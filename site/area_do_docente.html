@@ -5,15 +5,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Pessoas</title>
+  <title>Área dos Docentes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="stylesheet" type="text/css" media="screen" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="./css/custom.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
 <body>
+  <!-- nav bar-->
   <nav class="navbar fixed-top navbar-expand-lg">
 
       <a class="navbar-brand" href="#">
@@ -84,33 +87,89 @@
       </div>
   </nav>
 
-    <main class="container">
-      <!--breadcrumb-->
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item" aria-current="page"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Área do Docente</li>
-        </ol>
-      </nav>
+  <main class="container">
+  <!--breadcrumb-->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item" aria-current="page"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Área do Docente</li>
+    </ol>
+  </nav>
 
-      <!--header-->
-      <div class="d-flex">
-        <item class="mr-auto p-2"><h1 class="display-4">Pessoas</h1></item>
-        <item class="align-self-center text-muted p-2"><h4 class="lead">Buscar</h4></item>
-        <item class="align-self-center p-2"><img src="img/search24dp.png"></item>
+  <!-- header-docentes-->
+  <div class="d-flex">
+    <item class="mr-auto p-2"><h1 class="display-4">Docentes</h1></item>
+    <item class="align-self-center text-muted p-2"><h4 class="lead">Buscar</h4></item>
+    <item class="align-self-center p-2"><img src="img/search24dp.png"></item>
+  </div>
+
+  <!-- cards de links para sistemas -->
+  <div class="container">
+    <div class="row">
+        <div class="col-4 col-md-3 col-lg-2">
+          <div class="card">
+            <a href="https://ava.ead.ufscar.br/">
+              <img src="./img/area_do_docente/ava_ufscar.png" class="card-img-top img-fluid"/>
+            </a>
+          </div>
+        </div>
+        <div class="col-4 col-md-3 col-lg-2">
+          <div class="card">
+            <a href="https://moodle.dc.ufscar.br/">
+              <img src="./img/area_do_docente/moodle_dc.png" class="card-img-top img-fluid"/>
+            </a>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-md-3 col-lg-2">
+        <div class="card">
+          <a href="http://reserva.dc.ufscar.br">
+            <img src="./img/area_do_docente/reserva_de_salas_dc.png" class="card-img-top" />
+          </a>
+        </div>
       </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <div class="card">
+          <a href="https://sistemas.ufscar.br/sagui/">
+            <img src="./img/area_do_docente/sagui_ufscar.png" class="card-img-top" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-md-3 col-lg-2">
+        <div class="card">
+        <a href="https://sistemas.ufscar.br/siga/">
+          <img src="./img/area_do_docente/siga_ufscar.png" class="card-img-top" />
+        </a>
+      </div>
+      </div>
+    </div>
+  </div>
 
-      <ul class="list-group list-group-flush">
-        <a href="alunos.html" class="list-group-item list-group-item-action">Alunos</a>
-        <a href="docentes.html" class="list-group-item list-group-item-action">Docentes</a>
-        <a href="funcionarios.html" class="list-group-item list-group-item-action">Funcionários</a>
-        <a href="colaboradores.html" class="list-group-item list-group-item-action">Colaboradores</a>
+   <!-- pagination -->
+    <nav aria-label="...">
+      <ul class="pagination justify-content-center border-dark mt-2">
+        <li class="page-item disabled">
+          <span class="page-link">Anterior</span>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item">
+          <span class="page-link">
+            2
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Próximo</a>
+        </li>
       </ul>
-
+    </nav>
 
     </main>
 
-    <!--footer-->
     <footer class="footer bg-dark text-light mt-5">
         <!--Footer Links-->
         <div class="container text-center text-md-left">
