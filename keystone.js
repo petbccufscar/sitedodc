@@ -25,7 +25,6 @@ keystone.init({
 	'emails': 'templates/emails',
 
 	'auto update': true,
-	'mongo': "mongodb://"+process.env.DB_USER+":"+process.env.DB_PASSWORD+"@ds151809.mlab.com:51809/site-do-dc",
 	'session': true,
 	'auth': true,
 	'user model': 'User',
