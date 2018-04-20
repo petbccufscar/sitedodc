@@ -1,6 +1,12 @@
 {
   "name": "site-do-dc",
   "version": "0.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
   
   "engines": {
     "node": "9.11.1",
@@ -24,9 +30,5 @@
     "eslint": "3.15.0",
     "eslint-config-keystone": "3.0.0",
     "eslint-plugin-react": "^5.1.1"
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "start": "node keystone.js"
   }
 }

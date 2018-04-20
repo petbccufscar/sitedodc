@@ -1,7 +1,3 @@
-// Simulate config options from your production environment by
-// customising the .env file in your project's root folder.
-require('dotenv').config();
-
 // Require keystone
 var keystone = require('keystone');
 var cons = require('consolidate');
@@ -68,5 +64,4 @@ if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 	+ '\nset up your mailgun integration');
 }
 
-
-keystone.start();
+module.exports = keystone;
