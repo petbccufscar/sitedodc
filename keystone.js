@@ -2,8 +2,6 @@
 // customising the .env file in your project's root folder.
 require('dotenv').config();
 
-console.log(process.env.DB_USER);
-
 // Require keystone
 var keystone = require('keystone');
 var cons = require('consolidate');
