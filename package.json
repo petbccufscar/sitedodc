@@ -1,6 +1,12 @@
 {
   "name": "site-do-dc",
   "version": "0.0.0",
+  
+  "engines": {
+    "node": "9.11.1",
+    "npm": "5.8.x"
+  },
+  
   "private": true,
   "dependencies": {
     "async": "2.1.4",
