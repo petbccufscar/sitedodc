@@ -1,0 +1,80 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.11.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:braces:20180219':
+    - keystone > watchify > chokidar > anymatch > micromatch > braces:
+        reason: None given
+        expires: '2018-05-26T20:33:40.647Z'
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - keystone-email > mailgun-js > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > compression > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express > finalhandler > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express > send > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express-session > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > morgan > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > mongoose > mquery > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > method-override > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > body-parser > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express > serve-static > send > debug:
+        patched: '2018-04-26T20:28:39.929Z'
+  'npm:marked:20170112':
+    - keystone > marked:
+        patched: '2018-04-26T20:28:39.929Z'
+  'npm:marked:20170907':
+    - keystone > marked:
+        patched: '2018-04-26T20:28:39.929Z'
+  'npm:moment:20170905':
+    - keystone > moment:
+        patched: '2018-04-26T20:28:39.929Z'
+  'npm:ms:20170412':
+    - keystone > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express-session > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express > serve-static > send > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > method-override > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > mongoose > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > serve-favicon > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone-email > mailgun-js > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > compression > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express > finalhandler > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express > send > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express > send > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > express > serve-static > send > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > morgan > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > mongoose > mquery > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+    - keystone > body-parser > debug > ms:
+        patched: '2018-04-26T20:28:39.929Z'
+  'npm:qs:20170213':
+    - keystone > body-parser > qs:
+        patched: '2018-04-26T20:28:39.929Z'

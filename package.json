@@ -2,17 +2,17 @@
   "name": "site-do-dc",
   "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "snyk test",
     "lint": "eslint .",
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
-  
   "engines": {
     "node": "9.11.1",
     "npm": "5.8.x"
   },
-  
   "private": true,
   "dependencies": {
     "async": "2.1.4",
@@ -20,15 +20,17 @@
     "dotenv": "4.0.0",
     "i18n": "^0.8.3",
     "keystone": "4.0.0-beta.5",
-    "keystone-email": "1.0.5",
+    "keystone-email": "^1.0.5",
     "lodash": "^4.13.1",
-    "node-sass": "4.5.0",
-    "node-sass-middleware": "0.11.0",
-    "nunjucks": "3.0.0"
+    "node-sass": "^4.5.0",
+    "node-sass-middleware": "^0.11.0",
+    "nunjucks": "3.0.0",
+    "snyk": "^1.73.0"
   },
   "devDependencies": {
     "eslint": "3.15.0",
     "eslint-config-keystone": "3.0.0",
     "eslint-plugin-react": "^5.1.1"
-  }
+  },
+  "snyk": true
 }
