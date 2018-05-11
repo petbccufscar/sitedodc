@@ -3,8 +3,6 @@ var storage = require('../conf/fileStorage');
 
 var Types = keystone.Field.Types;
 
-
-
 var Noticia = new keystone.List('Noticia', {
     label: 'Notícias',
 
@@ -14,7 +12,6 @@ var Noticia = new keystone.List('Noticia', {
     plural: "notícias",
 
     track: true,
-
 });
 
 Noticia.add({
@@ -25,16 +22,11 @@ Noticia.add({
     dataPublicacao: { type: Types.Date, index: true, dependsOn: { status: 'publicado' } },
 
     conteudo: { type: Types.Html, wysiwyg: true, height: 500},
+    
+    // TODO: 
+    //imagemPrincipal: { type: Types.File, storage: storage.images},
 
-    // imagemPrincipal: { type: Types.LocalFiles, dest: './files/noticias', prefix: '/noticias',
-            
-    //         format: function(item, file){
-    //             return '<img src="' + file.href + '" style="max-width: 300px">'
-    //         }
-        
-    // },
-
-    imagemPrincipal: { type: Types.File, storage: storage.images},
+    imagemPrincipal: { type: Types.CloudinaryImage },
 
     outrasImagens: { type: Types.CloudinaryImages}
 });
@@ -44,5 +36,9 @@ Noticia.defaultColumns = 'titulo, status|20%, dataPublicacao|15%'
 Noticia.schema.post('save', function () {
 	console.log(this.imagemPrincipal.url);
 });
+
+// Noticia.schema.virtual('content.full').get(function () {
+// 	return this.content.extended || this.content.brief;
+// });
 
 Noticia.register();
