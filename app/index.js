@@ -49,13 +49,11 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
-	enquiries: 'enquiries',
+	mensagens: 'Mensagem',
 	users: 'users',
 	eventos: ['Evento', 'CategoriaEvento'],
 	noticias: ['Noticia']
 });
-
-// Start Keystone to connect to your database and initialise the web server
 
 if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 	console.log('----------------------------------------'

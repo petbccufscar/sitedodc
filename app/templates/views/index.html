@@ -1,20 +1,20 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-<header class="cover-full">
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
-        <!-- Wrapper for slides -->
+<header class="cover-carousel">
+    <div id="cover-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
         <div class="carousel-inner">
             <div class="carousel-item active" style="background-image: url('/images/teste/c1.jpg')">
                 <div class="carousel-caption">
                     <h2>
-                        <span>First Slide</span>
+                        <span>Primeira Notícia</span>
                     </h2>
                     <p>
-                        <span>This is a description for the first slide.</span>
+                        <span>Algum texto aqui.</span>
                     </p>
                 </div>
             </div>
+
             <div class="carousel-item" style="background-image: url('/images/teste/c2.jpg')">
                 <div class="carousel-caption">
                     <h2>
@@ -48,17 +48,17 @@
         </div>
 
         <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#cover-carousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#cover-carousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>
 
-    <img class="logo" src="./images/logos/logo_DC_branco.png" width="200px" alt="">
+    <img class="logo" src="./images/logos/logo_DC_branco.png" alt="">
 
     <div class="areas container-fluid">
         <div class="row text-center">

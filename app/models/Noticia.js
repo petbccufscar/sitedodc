@@ -1,6 +1,7 @@
-var keystone = require('keystone');
-var storage = require('../conf/fileStorage');
+// TODO: trocar a forma de armazenamento de imagens para utilizar o storage local
+// var storage = require('../conf/fileStorage');
 
+var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 var Noticia = new keystone.List('Noticia', {
@@ -21,14 +22,10 @@ Noticia.add({
     status: { type: Types.Select, options: 'rascunho, publicado, arquivado', default: 'rascunho', index: true },
     dataPublicacao: { type: Types.Date, index: true, dependsOn: { status: 'publicado' } },
 
-    conteudo: { type: Types.Html, wysiwyg: true, height: 500},
-    
-    // TODO: 
-    //imagemPrincipal: { type: Types.File, storage: storage.images},
-
+     // TODO: trocar para  --> imagemPrincipal: { type: Types.File, storage: storage.images}
     imagemPrincipal: { type: Types.CloudinaryImage },
 
-    outrasImagens: { type: Types.CloudinaryImages}
+    conteudo: { type: Types.Html, wysiwyg: true, height: 500}
 });
 
 Noticia.defaultColumns = 'titulo, status|20%, dataPublicacao|15%'
