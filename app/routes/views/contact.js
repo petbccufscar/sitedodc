@@ -1,3 +1,7 @@
+/**
+ * Arquivo com exemplo para lidar com o formulário de contato (envia email para todos os administradores)
+ */
+
 // var keystone = require('keystone');
 // var Enquiry = keystone.list('Enquiry');
 

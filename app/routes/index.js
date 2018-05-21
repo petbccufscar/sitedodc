@@ -14,12 +14,13 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Home
-	app.get('/', routes.views.home);
+	app.get('/', routes.views.home.index);
 
 	// Áreas
-	app.get('/area/docente', routes.views.area_docente)
+	app.get('/area/docente', routes.views.area_docente.index)
 
-	// Exemplo de páginas com passagem de parâmetros pela url
+
+	/* Exemplo de páginas com passagem de parâmetros pela url */
 	// app.get('/blog/:category?', routes.views.blog);
 	// app.get('/blog/post/:post', routes.views.post);
 
