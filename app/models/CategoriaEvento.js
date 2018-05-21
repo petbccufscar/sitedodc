@@ -11,9 +11,9 @@ var CategoriaEvento = new keystone.List('CategoriaEvento', {
 });
 
 CategoriaEvento.add({
-    name: {type: String, required:true}
+    name: { type: String, required: true }
 });
 
-CategoriaEvento.relationship({ ref: 'Evento', path: 'eventos', refPath: 'categorias'});
+CategoriaEvento.relationship({ ref: 'Evento', path: 'eventos', refPath: 'categorias' });
 
 CategoriaEvento.register();

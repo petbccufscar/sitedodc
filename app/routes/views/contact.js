@@ -1,37 +1,41 @@
-var keystone = require('keystone');
-var Enquiry = keystone.list('Enquiry');
+/**
+ * Arquivo com exemplo para lidar com o formulário de contato (envia email para todos os administradores)
+ */
 
-exports = module.exports = function (req, res) {
+// var keystone = require('keystone');
+// var Enquiry = keystone.list('Enquiry');
 
-	var view = new keystone.View(req, res);
-	var locals = res.locals;
+// exports = module.exports = function (req, res) {
 
-	// Set locals
-	locals.section = 'contact';
-	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
-	locals.formData = req.body || {};
-	locals.validationErrors = {};
-	locals.enquirySubmitted = false;
+// 	var view = new keystone.View(req, res);
+// 	var locals = res.locals;
 
-	// On POST requests, add the Enquiry item to the database
-	view.on('post', { action: 'contact' }, function (next) {
+// 	// Set locals
+// 	locals.section = 'contact';
+// 	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
+// 	locals.formData = req.body || {};
+// 	locals.validationErrors = {};
+// 	locals.enquirySubmitted = false;
 
-		var newEnquiry = new Enquiry.model();
-		var updater = newEnquiry.getUpdateHandler(req);
+// 	// On POST requests, add the Enquiry item to the database
+// 	view.on('post', { action: 'contact' }, function (next) {
 
-		updater.process(req.body, {
-			flashErrors: true,
-			fields: 'name, email, phone, enquiryType, message',
-			errorMessage: 'There was a problem submitting your enquiry:',
-		}, function (err) {
-			if (err) {
-				locals.validationErrors = err.errors;
-			} else {
-				locals.enquirySubmitted = true;
-			}
-			next();
-		});
-	});
+// 		var newEnquiry = new Enquiry.model();
+// 		var updater = newEnquiry.getUpdateHandler(req);
 
-	view.render('contact');
-};
+// 		updater.process(req.body, {
+// 			flashErrors: true,
+// 			fields: 'name, email, phone, enquiryType, message',
+// 			errorMessage: 'There was a problem submitting your enquiry:',
+// 		}, function (err) {
+// 			if (err) {
+// 				locals.validationErrors = err.errors;
+// 			} else {
+// 				locals.enquirySubmitted = true;
+// 			}
+// 			next();
+// 		});
+// 	});
+
+// 	view.render('contact');
+// };
