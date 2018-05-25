@@ -16,6 +16,7 @@
   "private": true,
   "dependencies": {
     "async": "2.1.4",
+    "bootstrap": "^4.1.1",
     "consolidate": "0.14.5",
     "dotenv": "4.0.0",
     "i18n": "^0.8.3",
