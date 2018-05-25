@@ -2,7 +2,8 @@
 var keystone = require('keystone');
 var cons = require('consolidate');
 var nunjucks = require('nunjucks');
-var sassMiddleware = require('node-sass-middleware');
+
+var path = require('path');
 
 // Importa configurações
 var conf = require('./conf');
@@ -15,17 +16,10 @@ keystone.init({
 	'name': 'Site do DC',
 	'brand': 'Site do DC',
 
-	'sass': sassMiddleware({
-		root: 'public/',
-        src: 'stylesheets/sass',
-        dest: '/stylesheets',
-        debug: true,
-        outputStyle: 'compressed',
-        indentedSyntax: true, // true = .sass and false = .scss
-        sourceMap: true,
-        prefix: '/stylesheets/',
-        includePaths: ['../node_modules']
-	}),
+	'sass': 'public',
+	'sass options': {
+		includePaths: [path.dirname(__dirname) + '/node_modules']
+	},
 	'static': ['public', conf.fileStorage.storagePath],
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
