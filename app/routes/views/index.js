@@ -3,10 +3,9 @@ var express = require('express')
 var router = express.Router();
 
 // Views
-var area_aluno = require('./area_aluno');
-var area_docente = require('./area_docente');
-// var area_visitante = require('./area_visitante');
+var areas = require('./areas');
 
+// Home
 router.get('/', function (req, res){
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
@@ -19,8 +18,6 @@ router.get('/', function (req, res){
 	view.render('index');
 });
 
-router.use('/area/aluno', area_aluno);
-router.use('/area/docente', area_docente);
-// router.use('/area/visitante', area_visitante);
+router.use('/area', areas);
 
 module.exports = router

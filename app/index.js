@@ -20,7 +20,12 @@ keystone.init({
 	'sass options': {
 		includePaths: [path.dirname(__dirname) + '/node_modules']
 	},
-	'static': ['public', conf.fileStorage.storagePath],
+
+	'static': ['public',
+		conf.fileStorage.storagePath, 
+		path.dirname(__dirname) + '/node_modules/bootstrap/dist/js'
+	],
+
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': '.html',
