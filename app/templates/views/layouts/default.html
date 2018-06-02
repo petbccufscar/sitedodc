@@ -1,7 +1,7 @@
 {% import "mixins/flash-messages.html" as FM %}
 
 <!doctype html>
-<html>
+<html lang="{{ lang|default("pt") }}">
 
 	<head>
 		<meta charset="utf-8">
@@ -107,7 +107,13 @@
 	by extending the js block #}
 
 	</body>
+	{# para o bootstrap #}
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="/bootstrap.min.js"></script>
+	{# plugins #}
+	<script src="/js/plugins/stick-kit.js"></script>
+	{# deafult script (viível por todas as páginas) #}
+	<script src="/js/default.js"></script>
+
 	{% block js %}{% endblock %}
 </html>

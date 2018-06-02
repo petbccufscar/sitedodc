@@ -301,8 +301,8 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.4;
   color: inherit; }
 
 h1, .h1 {
@@ -330,22 +330,22 @@ h6, .h6 {
 .display-1 {
   font-size: 6rem;
   font-weight: 300;
-  line-height: 1.2; }
+  line-height: 1.4; }
 
 .display-2 {
   font-size: 5.5rem;
   font-weight: 300;
-  line-height: 1.2; }
+  line-height: 1.4; }
 
 .display-3 {
   font-size: 4.5rem;
   font-weight: 300;
-  line-height: 1.2; }
+  line-height: 1.4; }
 
 .display-4 {
   font-size: 3.5rem;
   font-weight: 300;
-  line-height: 1.2; }
+  line-height: 1.4; }
 
 hr {
   margin-top: 1rem;
@@ -6283,6 +6283,10 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+.cover {
+  height: 200px;
+  background-color: #F89700; }
+
 /* Cover section */
 .cover-carousel {
   height: 70vh;
@@ -6318,6 +6322,23 @@ a.text-dark:hover, a.text-dark:focus {
       background-color: black;
       padding: 15px; }
 
+.links-rapidos {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px; }
+  .links-rapidos .link {
+    height: 60px;
+    width: 60px;
+    margin: 0 10px 10px 0;
+    background-color: black; }
+  .links-rapidos .is-two {
+    width: 130px; }
+
+.affix {
+  z-index: 9990; }
+  .affix.navbar {
+    z-index: 9999; }
+
 .areas {
   background: #000;
   color: #fff;
@@ -6330,6 +6351,33 @@ a.text-dark:hover, a.text-dark:focus {
     color: #fff; }
     .areas a:hover {
       text-decoration: none; }
+
+.event-card {
+  display: flex;
+  align-items: center; }
+  .event-card .header {
+    text-align: right;
+    padding: 10px;
+    float: left; }
+    .event-card .header span {
+      display: block;
+      line-height: 1.9rem; }
+    .event-card .header .date {
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: #275E87; }
+    .event-card .header .time {
+      font-weight: 300;
+      font-size: 1.7rem;
+      color: #F89700; }
+  .event-card .body {
+    padding: 10px; }
+    .event-card .body p {
+      display: table-cell;
+      vertical-align: middle;
+      font-weight: 700;
+      color: #275E87;
+      font-size: 1.2rem; }
 
 #area_visitante:hover {
   background: orange; }
@@ -6350,8 +6398,8 @@ a.text-dark:hover, a.text-dark:focus {
 /* Agenda */
 .evento {
   max-width: 300px;
-  border-radius: 0px;
-  margin: 0 10px 20px 10px;
+  border-radius: 0;
+  margin: 0 10px 20px;
   display: flex;
   cursor: pointer; }
 
