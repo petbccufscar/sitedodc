@@ -1,252 +1,210 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-<header class="cover-carousel">
-    <div id="cover-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('/images/teste/c1.jpg')">
-                <div class="carousel-caption">
-                    <h2>
-                        <span>Primeira Notícia</span>
-                    </h2>
-                    <p>
-                        <span>Algum texto aqui.</span>
-                    </p>
-                </div>
-            </div>
+	<header>
 
-            <div class="carousel-item" style="background-image: url('/images/teste/c2.jpg')">
-                <div class="carousel-caption">
-                    <h2>
-                        <span>First Slide</span>
-                    </h2>
-                    <p>
-                        <span>This is a description for the first slide.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image: url('/images/teste/c3.jpg')">
-                <div class="carousel-caption">
-                    <h2>
-                        <span>First Slide</span>
-                    </h2>
-                    <p>
-                        <span>This is a description for the first slide.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image: url('/images/teste/c4.jpg')">
-                <div class="carousel-caption">
-                    <h2>
-                        <span>First Slide</span>
-                    </h2>
-                    <p>
-                        <span>This is a description for the first slide.</span>
-                    </p>
-                </div>
-            </div>
-        </div>
+		<!-- <img class="logo" src="./images/logos/logo_DC_branco.png" alt=""> -->
 
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#cover-carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#cover-carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
+		<div class="areas container-fluid">
+			<div class="row text-center">
+				<a href="/area/visitante" id="area_visitante" class="area col">
+					<h4>Área do Visitante</h4>
+				</a>
+				<a href="/area/docente" id="area_docente" class="area col">
+					<h4>Área do Docente</h4>
+				</a>
+				<a href="/area/aluno" id="area_aluno" class="area col">
+					<h4>Área do Aluno</h4>
+				</a>
+			</div>
+		</div>
+	</header>
 
-    <img class="logo" src="./images/logos/logo_DC_branco.png" alt="">
+	<main role="main" class="container">
 
-    <div class="areas container-fluid">
-        <div class="row text-center">
-            <a href="/area/visitante" id="area_visitante" class="area col">
-                <h3>Área do Visitante</h3>
-            </a>
-            <a href="/area/docente" id="area_docente" class="area col border-left border-right border-light">
-                <h3>Área do Docente</h3>
-            </a>
-            <a href="/area/aluno" id="area_aluno" class="area col">
-                <h3>Área do Aluno</h3>
-            </a>
-        </div>
-    </div>
-</header>
+		<div class="row">
 
-<main role="main" class="container">
+			<div class="col-lg-8">
+				<h3>Notícias</h3>
 
-    <div class="section">
-        <h1>
-            <i class="fas fa-calendar-alt"></i> Agenda</h1>
-        <hr>
+        <div class="row">
 
-        <div class="row justify-content-center">
+					<div class="col-md-6 pr-5 mb-5">
+						<div class="card border-0">
+							<img
+								class="card-img-top"
+								src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163bcae050a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163bcae050a%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.2109375%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+								alt="Card image cap">
+							<div class="card-body p-0">
+								<h4 class="card-title"><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum mauris ut diam vulputate, nec scelerisque magna maximus.</p>
+							</div>
+						</div>
+					</div>
 
-            <div class="evento border">
+          <div class="col-md-6 pr-5 mb-5">
+						<div class="card border-0">
+							<img
+								class="card-img-top"
+								src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163bcae050a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163bcae050a%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.2109375%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+								alt="Card image cap">
+							<div class="card-body p-0">
+								<h4 class="card-title"><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum mauris ut diam vulputate, nec scelerisque magna maximus. </p>
+							</div>
+						</div>
+					</div>
 
-                <div class="evento-data border-right text-center">
-                    <h1>15/04</h1>
-                    <h6>
-                        <i class="fas fa-clock"></i> 9:00 - 12:00</h6>
-                    <span class="badge badge-primary">Apresentação</span>
-                </div>
-                <div class="evento-corpo">
-                    <h5>SECOMP</h5>
-                    <p>Aqui vai uma descrição do evento ahouodsi dakfjdsfj </p>
-                </div>
-            </div>
+          <div class="col-md-6 pr-5 mb-5">
+						<div class="card border-0">
+							<img
+								class="card-img-top"
+								src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163bcae050a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163bcae050a%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.2109375%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+								alt="Card image cap">
+							<div class="card-body p-0">
+								<h4 class="card-title"><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum mauris ut diam vulputate, nec scelerisque magna maximus. </p>
+							</div>
+						</div>
+					</div>
 
-            <div class="evento border">
-                <div class="evento-data border-right text-center">
-                    <h1>15/04</h1>
-                    <h6>
-                        <i class="fas fa-clock"></i> 9:00 - 12:00</h6>
-                    <span class="badge badge-primary">Apresentação</span>
-                </div>
-                <div class="evento-corpo">
-                    <h5>SECOMP</h5>
-                    <p>Aqui vai uma descrição do evento ahouodsi dakfjdsfj </p>
-                </div>
-            </div>
+          <div class="col-md-6 pr-5 mb-5">
+						<div class="card border-0">
+							<img
+								class="card-img-top"
+								src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163bcae050a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163bcae050a%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.2109375%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+								alt="Card image cap">
+							<div class="card-body p-0">
+								<h4 class="card-title"><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum mauris ut diam vulputate, nec scelerisque magna maximus. </p>
+							</div>
+						</div>
+					</div>
 
-            <div class="evento border">
-                <div class="evento-data border-right text-center">
-                    <h1>15/04</h1>
-                    <h6>
-                        <i class="fas fa-clock"></i> 9:00 - 12:00</h6>
-                    <span class="badge badge-primary">Apresentação</span>
-                </div>
-                <div class="evento-corpo">
-                    <h5>SECOMP</h5>
-                    <p>Aqui vai uma descrição do evento ahouodsi dakfjdsfj </p>
-                </div>
-            </div>
-        </div>
-    </div>
+          <div class="col-md-6 pr-5 mb-5">
+						<div class="card border-0">
+							<img
+								class="card-img-top"
+								src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163bcae050a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163bcae050a%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.2109375%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+								alt="Card image cap">
+							<div class="card-body p-0">
+								<h4 class="card-title"><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum mauris ut diam vulputate, nec scelerisque magna maximus. </p>
+							</div>
+						</div>
+					</div>
 
-    <div class="section">
-        <h1>
-            <i class="fas fa-newspaper"></i> Notícias</h1>
-        <hr>
-        <div class="row no-gutters">
+				</div>
+			</div>
+
+			<div class="col">
+        <div class="border-left pl-3">
+          <h3>Eventos</h3>
+          <div class="row">
+
             <div class="col">
-                <div id="noticias-carousel" class="carousel slide" data-ride="carousel">
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
 
-                        <div class="carousel-item active" style="background-image: url('/images/teste/c4.jpg')">
-
-                            <div class="carousel-caption">
-                                <h4>
-                                    Notícia 1
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                                    ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End Item -->
-
-                        <div class="carousel-item" style="background-image: url('/images/teste/c1.jpg')">
-
-                            <div class="carousel-caption">
-                                <h4>
-                                    Notícia 2
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                                    ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End Item -->
-
-                        <div class="carousel-item" style="background-image: url('/images/teste/c2.jpg')">
-
-                            <div class="carousel-caption">
-                                <h4>
-                                    Notícia 2
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                                    ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End Item -->
-
-                        <div class="carousel-item" style="background-image: url('/images/teste/c3.jpg')">
-
-                            <div class="carousel-caption">
-                                <h4>
-                                    Notícia 2
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                                    ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End Item -->
-
-                    </div>
-                    <!-- End Carousel Inner -->
-
-
-                    <!-- Controls -->
-                    <div class="carousel-controls">
-                        <!-- Left and right controls -->
-                        <a class="carousel-control-prev" href="#noticias-carousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#noticias-carousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-
+              <div class="event-card border-bottom">
+                <div class="header">
+                  <span class="date">22/05</span>
+                  <span class="time">9h30</span>
                 </div>
-                <!-- End Carousel -->
+                <div class="body">
+                  <p>Nome do evento com até 2 linhas...</p>
+                </div>
+              </div>
+
+              <div class="event-card border-bottom">
+                <div class="header">
+                  <span class="date">22/05</span>
+                  <span class="time">18h00</span>
+                </div>
+                <div class="body">
+                  <p>Nome do evento com até 2 linhas...</p>
+                </div>
+              </div>
+
+              <div class="event-card border-bottom">
+                <div class="header">
+                  <span class="date">04/06</span>
+                  <span class="time">12h30</span>
+                </div>
+                <div class="body">
+                  <p>Nome do evento com até 2 linhas...</p>
+                </div>
+              </div>
+
+              <div class="event-card">
+                <div class="header">
+                  <span class="date">30/06</span>
+                  <span class="time">8h00</span>
+                </div>
+                <div class="body">
+                  <p>Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+
+
             </div>
+          </div>
 
-            <div id="noticias-thumb" class="col-4 no-gutters d-flex flex-column justify-content-between bg-dark text-light">
-
-                <div data-target="#noticias-carousel" data-slide-to="0" class="active border-bottom">
-                    <h4>Notícia 1</h4>
-                    <p>Alguma descrição aqui</p>
-                </div>
-
-                <div data-target="#noticias-carousel" data-slide-to="1" class="border-bottom">
-                    <h4>Notícia 2</h4>
-                    <p>Alguma descrição aqui</p>
-                </div>
-
-                <div data-target="#noticias-carousel" data-slide-to="2" class="border-bottom">
-                    <h4>Notícia 3</h4>
-                    <p>Alguma descrição aqui</p>
-                </div>
-
-                <div data-target="#noticias-carousel" data-slide-to="3">
-                    <h4>Notícia 4</h4>
-                    <p>Alguma descrição aqui</p>
-                </div>
-            </div>
         </div>
 
-    </div>
+				<div class="border-left pl-3 mt-4">
+					<h3>Links Rápidos</h3>
+          <div class="links-rapidos">
+            <div class="link is-two">
 
-</main>
-{% endblock %}
 
-{% block js %}
-<script>
-  $(document).ready(function () {
-    var noticias_carousel = $('#noticias-carousel');
-    var thumbnails = document.getElementById("noticias-thumb").children;
-    noticias_carousel.on('slide.bs.carousel', function (data) {
-      thumbnails[data.from].classList.remove('active');
-      thumbnails[data.to].classList.add('active');
-    });
-  })
-</script>
-{% endblock %}
+            </div>
+
+            <div class="link">
+
+
+            </div>
+
+            <div class="link">
+
+
+            </div>
+
+            <div class="link">
+
+
+            </div>
+
+            <div class="link">
+
+
+            </div>
+
+            <div class="link">
+
+
+            </div>
+
+            <div class="link">
+
+
+            </div>
+
+          </div>
+				</div>
+
+			</div>
+
+		</main>
+	{% endblock %}
+
+	{% block js %}
+		<script>
+			$(document).ready(function () {
+				var noticias_carousel = $('#noticias-carousel');
+				var thumbnails = document.getElementById("noticias-thumb").children;
+				noticias_carousel.on('slide.bs.carousel', function (data) {
+					thumbnails[data.from].classList.remove('active');
+					thumbnails[data.to].classList.add('active');
+				});
+			})
+		</script>
+	{% endblock %}

@@ -9,8 +9,8 @@
 
 			{# Menu lateral #}
 			<div class="col-md-2 col-sm-4">
-				<div class="border-right pr-2">
-					<ul class="nav nav-pills flex-column " id="menu_area" role="tablist">
+				<div class="border-right pr-2" id="menu_area" data-toggle="affix" data-parent="main" data-offset="75">
+					<ul class="nav nav-pills flex-column" role="tablist">
 						<h6 class="border-bottom p-2">Graduação</h6>
 
 						<li class="nav-item">
@@ -124,4 +124,8 @@
 		</div>
 
 	</main>
+{% endblock %}
+
+{% block js %}
+
 {% endblock %}
