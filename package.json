@@ -23,6 +23,7 @@
     "keystone": "4.0.0-beta.5",
     "keystone-email": "^1.0.5",
     "lodash": "^4.17.10",
+    "moment": "^2.22.2",
     "node-sass": "^4.9.0",
     "node-sass-middleware": "^0.11.0",
     "nunjucks": "3.1.3",

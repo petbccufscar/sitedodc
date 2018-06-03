@@ -6285,7 +6285,43 @@ a.text-dark:hover, a.text-dark:focus {
 
 .cover {
   height: 200px;
-  background-color: #F89700; }
+  background-color: #F89700;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/images/fachada_dc_ufscar.jpg"); }
+  .cover .filter {
+    background-color: #1A3B54c0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; }
+  .cover .departamento {
+    font-size: 25px;
+    color: white;
+    font-weight: 900;
+    line-height: 20px; }
+  .cover .ufscar {
+    font-size: 22px;
+    color: white;
+    font-weight: 400;
+    line-height: 0; }
+
+.navbar-nav a {
+  color: #275E87 !important;
+  margin-right: 10px;
+  margin-left: 10px; }
+  .navbar-nav a:hover {
+    color: #F89700 !important; }
+
+.navbar-nav .btn:hover {
+  background-color: #F89700;
+  color: #fff !important;
+  border-color: #F89700; }
 
 /* Cover section */
 .cover-carousel {
@@ -6347,12 +6383,13 @@ a.text-dark:hover, a.text-dark:focus {
   left: 0; }
   .areas a {
     cursor: pointer;
-    padding: 20px;
+    padding: 10px;
     color: #fff; }
     .areas a:hover {
       text-decoration: none; }
 
 .event-card {
+  cursor: pointer;
   display: flex;
   align-items: center; }
   .event-card .header {
@@ -6378,6 +6415,50 @@ a.text-dark:hover, a.text-dark:focus {
       font-weight: 700;
       color: #275E87;
       font-size: 1.2rem; }
+  .event-card:hover {
+    background-color: #000; }
+    .event-card:hover .header span {
+      color: white; }
+    .event-card:hover .body p {
+      color: white; }
+
+.noticia-thumbnail {
+  color: #212529;
+  text-decoration: none; }
+  .noticia-thumbnail .titulo {
+    color: #275E87; }
+  .noticia-thumbnail .img-top {
+    width: 100%;
+    padding-top: 70%;
+    position: relative;
+    overflow: hidden; }
+    .noticia-thumbnail .img-top .img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+      -o-transition: all 1s ease; }
+  .noticia-thumbnail:hover {
+    color: #275E87;
+    text-decoration: none; }
+    .noticia-thumbnail:hover .titulo {
+      color: #F89700; }
+    .noticia-thumbnail:hover .img {
+      transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      -ms-transform: scale(1.2); }
 
 #area_visitante:hover {
   background: orange; }
@@ -6387,33 +6468,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 #area_aluno:hover {
   background: red; }
-
-/* nav-bar */
-.navbar .nav-link {
-  color: white; }
-
-.navbar-nav > li {
-  padding: 0 15px; }
-
-/* Agenda */
-.evento {
-  max-width: 300px;
-  border-radius: 0;
-  margin: 0 10px 20px;
-  display: flex;
-  cursor: pointer; }
-
-.evento:hover {
-  background: black;
-  color: white; }
-
-.evento-data {
-  padding: 10px;
-  float: left;
-  min-width: 130px; }
-
-.evento-corpo {
-  padding: 10px; }
 
 #noticias-carousel .carousel-item {
   height: 400px;

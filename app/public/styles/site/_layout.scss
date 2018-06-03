@@ -1,6 +1,52 @@
 .cover {
 	height: 200px;
 	background-color: $secondary;
+	@include cover-bg();
+	background-position: center;
+	background-image: url("/images/fachada_dc_ufscar.jpg");
+
+	.filter {
+		background-color: #1A3B54c0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 200px;
+	}
+	// TODO: lidar com a responsividade
+	.departamento {
+		font-size: 25px;
+		color: white;
+		font-weight: $font-weight-black;
+		line-height: 20px;
+	}
+
+	.ufscar {
+		font-size: 22px;
+		color: white;
+		font-weight: $font-weight-normal;
+		line-height: 0;
+	}
+}
+
+.navbar-nav {
+	a {
+		color: $primary !important;
+		margin-right: 10px;
+		margin-left: 10px;
+
+		&:hover {
+			color: $secondary !important;
+		}
+	}
+
+	.btn {
+		&:hover {
+			background-color: $secondary;
+			color: $white !important;
+			border-color: $secondary;
+		}
+	}
 }
 /* Cover section */
 .cover-carousel {
@@ -72,7 +118,7 @@
 
 	a {
 		cursor: pointer;
-		padding: 20px;
+		padding: 10px;
 		color: $white;
 
 		&:hover {
@@ -82,6 +128,7 @@
 }
 
 .event-card {
+	cursor: pointer;
 	display: flex;
 	align-items: center;
 
@@ -119,6 +166,69 @@
 			font-size: 1.2rem;
 		}
 	}
+
+	&:hover {
+		background-color: #000;
+
+		.header span{
+			color: white;
+		}
+
+		.body p {
+			color: white;
+		}
+	}
+}
+
+.noticia-thumbnail {
+  color: $body-color;
+  text-decoration: none;
+
+  .titulo {
+    color: $primary;
+  }
+
+	.img-top {
+    width: 100%;
+    padding-top: 70%;
+    position: relative;
+
+    overflow:hidden;
+
+		.img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      @include cover-bg;
+
+			transition: all 1s ease;
+			-moz-transition: all 1s ease;
+			-ms-transition: all 1s ease;
+			-webkit-transition: all 1s ease;
+			-o-transition: all 1s ease;
+
+		}
+	}
+
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+
+    .titulo {
+      color: $secondary;
+    }
+
+    .img {
+      transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+    }
+  }
 }
 
 #area_visitante:hover {
@@ -131,42 +241,6 @@
 
 #area_aluno:hover {
 	background: red;
-}
-/* nav-bar */
-// .navbar{
-//     background: black;
-//     color: white;
-// }
-
-.navbar .nav-link {
-	color: white;
-}
-
-.navbar-nav > li {
-	padding: 0 15px;
-}
-/* Agenda */
-.evento {
-	max-width: 300px;
-	border-radius: 0;
-	margin: 0 10px 20px;
-	display: flex;
-	cursor: pointer;
-}
-
-.evento:hover {
-	background: black;
-	color: white;
-}
-
-.evento-data {
-	padding: 10px;
-	float: left;
-	min-width: 130px;
-}
-
-.evento-corpo {
-	padding: 10px;
 }
 
 #noticias-carousel .carousel-item {
