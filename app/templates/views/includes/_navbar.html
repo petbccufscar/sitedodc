@@ -1,18 +1,28 @@
 <div class="cover">
+  <div class="filter d-flex justify-content-around align-items-center">
 
+      <div class="">
+        <img class="image" src="/images/logos/logo_DC_branco.png" alt="" width="125px">
+      </div>
+
+      <div class="text-center">
+        <p class="departamento">DEPARTAMENTO DE COMPUTAÇÃO</p>
+        <p class="ufscar">UNIVERSIDADE FEDERAL DE SÃO CARLOS</p>
+      </div>
+
+      <div class="">
+        <img class="image" src="/images/logos/logo_ufscar_branco.png" alt="" width="125px">
+      </div>
+
+  </div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary" data-toggle="affix">
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow" data-toggle="affix">
 
     <a class="navbar-brand" href="/">
-        <img src="/images/logos/logo_DC_branco.png" width="60" alt="Logo do departamento de computação">
+        <img src="/images/logos/logo_DC.png" width="60" alt="Logo do departamento de computação">
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <!-- Ensino -->
             <li class="nav-item dropdown">
@@ -52,9 +62,7 @@
                     <a class="dropdown-item" href="colaboradores.html">Colaboradores</a>
                 </div>
             </li>
-        </ul>
 
-        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
             <!-- Institucional -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Institucional</a>
@@ -63,10 +71,35 @@
                     <a class="dropdown-item" href="contatos.html">Contato</a>
                 </div>
             </li>
-            <!-- Suporte -->
-            <li class="nav-item">
-                <a class="btn btn-outline-light" href="#">Suporte</a>
-            </li>
         </ul>
     </div>
+
+    <ul class="navbar-nav flex-row ml-auto d-md-flex">
+        <!-- Suporte -->
+        <li class="nav-item">
+            <a class="btn btn-outline-primary" href="#">Suporte</a>
+        </li>
+
+        <li class="nav-item border-right pl-3"></li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-adjust"></i></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">PT</i></a>
+        </li>
+    </ul>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fa fa-navicon"></i>
+        </span>
+    </button>
+
 </nav>
