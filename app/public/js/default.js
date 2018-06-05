@@ -13,7 +13,5 @@ $(document).ready(function() {
 			offset_top: $(this).data('offset')
 		});
 	});
-
-
-
+	
 });

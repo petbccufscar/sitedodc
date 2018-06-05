@@ -6283,90 +6283,78 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-.cover {
-  height: 200px;
-  background-color: #F89700;
+header {
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: center;
-  background-image: url("/images/fachada_dc_ufscar.jpg"); }
-  .cover .filter {
-    background-color: #1A3B54c0;
-    position: absolute;
-    top: 0;
-    left: 0;
+  background-image: url("/images/fachada_dc_ufscar.jpg");
+  box-shadow: inset 0 0 0 300px #1A3B54c0; }
+  header #logos {
     width: 100%;
     height: 200px; }
-  .cover .departamento {
-    font-size: 25px;
-    color: white;
-    font-weight: 900;
-    line-height: 20px; }
-  .cover .ufscar {
-    font-size: 22px;
-    color: white;
-    font-weight: 400;
-    line-height: 0; }
+    header #logos img {
+      width: 125px; }
+    header #logos #departamento {
+      font-size: 25px;
+      color: white;
+      font-weight: 900;
+      line-height: 20px; }
+    header #logos #ufscar {
+      font-size: 22px;
+      color: white;
+      font-weight: 400;
+      line-height: 0; }
+    @media (max-width: 767.98px) {
+      header #logos img {
+        width: 100px; }
+      header #logos #departamento {
+        font-size: 18px;
+        line-height: 10px; }
+      header #logos #ufscar {
+        font-size: 16px; } }
 
-.navbar-nav a {
+#areas {
+  background: #00000066;
+  color: #fff; }
+  #areas a {
+    cursor: pointer;
+    padding: 10px;
+    color: #fff; }
+    #areas a:hover {
+      text-decoration: none; }
+    #areas a:hover {
+      background-color: black; }
+
+nav a {
   color: #275E87 !important;
-  margin-right: 10px;
-  margin-left: 10px; }
-  .navbar-nav a:hover {
+  margin-right: 5px;
+  margin-left: 5px; }
+  nav a:hover {
     color: #F89700 !important; }
 
-.navbar-nav .btn:hover {
+nav .btn:hover {
   background-color: #F89700;
   color: #fff !important;
   border-color: #F89700; }
 
 /* Cover section */
-.cover-carousel {
-  height: 70vh;
-  margin-bottom: 30px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .cover-carousel .carousel-item {
-    height: 60vh;
-    min-height: 300px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-  .cover-carousel .logo {
-    position: absolute;
-    margin: auto;
-    width: 200px;
-    right: 0;
-    bottom: 60vh;
-    left: 0; }
-  .cover-carousel .carousel-caption {
-    text-align: left;
-    margin-bottom: 20px;
-    position: absolute;
-    left: 0;
-    z-index: 9999;
-    right: auto; }
-    .cover-carousel .carousel-caption span {
-      background-color: black;
-      padding: 15px; }
-
 .links-rapidos {
   display: flex;
   flex-wrap: wrap;
   max-width: 300px; }
   .links-rapidos .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 60px;
     width: 60px;
     margin: 0 10px 10px 0;
-    background-color: black; }
+    border-width: 1px;
+    border-style: solid; }
+    .links-rapidos .link:hover {
+      border-color: #F89700; }
   .links-rapidos .is-two {
     width: 130px; }
 
@@ -6375,18 +6363,15 @@ a.text-dark:hover, a.text-dark:focus {
   .affix.navbar {
     z-index: 9999; }
 
-.areas {
-  background: #000;
-  color: #fff;
-  position: relative;
-  bottom: 0;
-  left: 0; }
-  .areas a {
-    cursor: pointer;
-    padding: 10px;
-    color: #fff; }
-    .areas a:hover {
-      text-decoration: none; }
+.affix-sidebar {
+  z-index: 9990; }
+  @media (max-width: 767.98px) {
+    .affix-sidebar {
+      top: 0;
+      left: 0;
+      width: 250px !important; }
+      .affix-sidebar .nav {
+        background-color: #fff; } }
 
 .event-card {
   cursor: pointer;
@@ -6459,44 +6444,6 @@ a.text-dark:hover, a.text-dark:focus {
       -webkit-transform: scale(1.2);
       -o-transform: scale(1.2);
       -ms-transform: scale(1.2); }
-
-#area_visitante:hover {
-  background: orange; }
-
-#area_docente:hover {
-  background: green; }
-
-#area_aluno:hover {
-  background: red; }
-
-#noticias-carousel .carousel-item {
-  height: 400px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
-#noticias-carousel .carousel-caption {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: left;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.6);
-  text-shadow: none; }
-
-#noticias-thumb > div {
-  height: 100px;
-  padding: 10px;
-  cursor: pointer; }
-
-#noticias-thumb > div:hover {
-  background: black; }
-
-#noticias-thumb .active {
-  background: black;
-  color: white; }
 
 /* Footer */
 .footer {

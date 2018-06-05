@@ -1,39 +1,72 @@
-.cover {
-	height: 200px;
-	background-color: $secondary;
+header {
 	@include cover-bg();
-	background-position: center;
 	background-image: url("/images/fachada_dc_ufscar.jpg");
+	box-shadow: inset 0 0 0 300px #1A3B54c0; // filtro para deixar a imagem em tom de azul
 
-	.filter {
-		background-color: #1A3B54c0;
-		position: absolute;
-		top: 0;
-		left: 0;
+	#logos {
 		width: 100%;
 		height: 200px;
-	}
-	// TODO: lidar com a responsividade
-	.departamento {
-		font-size: 25px;
-		color: white;
-		font-weight: $font-weight-black;
-		line-height: 20px;
-	}
 
-	.ufscar {
-		font-size: 22px;
-		color: white;
-		font-weight: $font-weight-normal;
-		line-height: 0;
+		img {
+			width: 125px;
+		}
+
+		#departamento {
+			font-size: 25px;
+			color: white;
+			font-weight: $font-weight-black;
+			line-height: 20px;
+		}
+
+		#ufscar {
+			font-size: 22px;
+			color: white;
+			font-weight: $font-weight-normal;
+			line-height: 0;
+		}
+
+		@include media-breakpoint-down(sm) {
+			img {
+				width: 100px;
+			}
+
+			#departamento {
+				font-size: 18px;
+				line-height: 10px;
+			}
+
+			#ufscar {
+				font-size: 16px;
+			}
+		}
+
 	}
 }
 
-.navbar-nav {
+#areas {
+	background: #00000066;
+	color: $white;
+
+	a {
+		cursor: pointer;
+		padding: 10px;
+		color: $white;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:hover {
+			background-color: black;
+		}
+	}
+}
+
+nav {
 	a {
 		color: $primary !important;
-		margin-right: 10px;
-		margin-left: 10px;
+		margin-right: 5px;
+		margin-left: 5px;
 
 		&:hover {
 			color: $secondary !important;
@@ -48,41 +81,42 @@
 		}
 	}
 }
+
 /* Cover section */
-.cover-carousel {
-	height: 70vh;
-	margin-bottom: 30px;
-	@include cover-bg();
-
-	.carousel-item {
-		height: 60vh;
-		min-height: 300px;
-		@include cover-bg();
-	}
-
-	.logo {
-		position: absolute;
-		margin: auto;
-		width: 200px;
-		right: 0;
-		bottom: 60vh;
-		left: 0;
-	}
-
-	.carousel-caption {
-		text-align: left;
-		margin-bottom: 20px;
-		position: absolute;
-		left: 0;
-		z-index: 9999;
-		right: auto;
-
-		span {
-			background-color: black;
-			padding: 15px;
-		}
-	}
-}
+// .cover-carousel {
+// 	height: 70vh;
+// 	margin-bottom: 30px;
+// 	@include cover-bg();
+//
+// 	.carousel-item {
+// 		height: 60vh;
+// 		min-height: 300px;
+// 		@include cover-bg();
+// 	}
+//
+// 	.logo {
+// 		position: absolute;
+// 		margin: auto;
+// 		width: 200px;
+// 		right: 0;
+// 		bottom: 60vh;
+// 		left: 0;
+// 	}
+//
+// 	.carousel-caption {
+// 		text-align: left;
+// 		margin-bottom: 20px;
+// 		position: absolute;
+// 		left: 0;
+// 		z-index: 9999;
+// 		right: auto;
+//
+// 		span {
+// 			background-color: black;
+// 			padding: 15px;
+// 		}
+// 	}
+// }
 
 .links-rapidos {
 	display: flex;
@@ -90,10 +124,17 @@
 	max-width: 300px;
 
 	.link {
+		display:flex;
+	  align-items:center;
+	  justify-content:center;
 		height: 60px;
 		width: 60px;
 		margin: 0 10px 10px 0;
-		background-color: black;
+		border-width: 1px;
+		border-style: solid;
+		&:hover{
+			border-color: $secondary;
+		}
 	}
 
 	.is-two {
@@ -109,20 +150,15 @@
 	}
 }
 
-.areas {
-	background: $black;
-	color: $white;
-	position: relative;
-	bottom: 0;
-	left: 0;
+.affix-sidebar {
+	z-index: 9990;
 
-	a {
-		cursor: pointer;
-		padding: 10px;
-		color: $white;
-
-		&:hover {
-			text-decoration: none;
+	@include media-breakpoint-down(sm){
+		top: 0;
+		left: 0;
+		width: 250px !important;
+		.nav {
+			background-color: $white;
 		}
 	}
 }
@@ -231,51 +267,40 @@
   }
 }
 
-#area_visitante:hover {
-	background: orange;
-}
+// #noticias-carousel .carousel-item {
+// 	height: 400px;
+// 	background: no-repeat center center scroll;
+// 	-webkit-background-size: cover;
+// 	-moz-background-size: cover;
+// 	-o-background-size: cover;
+// 	background-size: cover;
+// }
 
-#area_docente:hover {
-	background: green;
-}
+// #noticias-carousel .carousel-caption {
+// 	left: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	text-align: left;
+// 	padding: 10px;
+// 	background: rgba(0,0,0,0.6);
+// 	text-shadow: none;
+// }
 
-#area_aluno:hover {
-	background: red;
-}
+// #noticias-thumb > div {
+// 	height: 100px;
+// 	padding: 10px;
+// 	cursor: pointer;
+// }
+//
+// #noticias-thumb > div:hover {
+// 	background: black;
+// }
+//
+// #noticias-thumb .active {
+// 	background: black;
+// 	color: white;
+// }
 
-#noticias-carousel .carousel-item {
-	height: 400px;
-	background: no-repeat center center scroll;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-#noticias-carousel .carousel-caption {
-	left: 0;
-	right: 0;
-	bottom: 0;
-	text-align: left;
-	padding: 10px;
-	background: rgba(0,0,0,0.6);
-	text-shadow: none;
-}
-
-#noticias-thumb > div {
-	height: 100px;
-	padding: 10px;
-	cursor: pointer;
-}
-
-#noticias-thumb > div:hover {
-	background: black;
-}
-
-#noticias-thumb .active {
-	background: black;
-	color: white;
-}
 /* Footer */
 .footer {
 	font-size: 0.8rem;
