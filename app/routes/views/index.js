@@ -8,7 +8,10 @@ var moment = require('moment');
 
 // Views
 var areas = require('./areas');
+router.use('/area', areas);
+
 var noticias = require('./noticias');
+router.use('/noticias', noticias);
 
 // Home
 router.get('/', function (req, res){
@@ -57,8 +60,5 @@ router.get('/', function (req, res){
 	// Render the view
 	view.render('index');
 });
-
-router.use('/area', areas);
-router.use('/noticias', noticias);
 
 module.exports = router

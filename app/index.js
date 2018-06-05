@@ -18,11 +18,12 @@ keystone.init({
 
 	'sass': 'public',
 	'sass options': {
-		includePaths: [path.dirname(__dirname) + '/node_modules']
+		includePaths: [path.dirname(__dirname) + '/node_modules'],
+		outputStyle: 'compressed'
 	},
 
 	'static': ['public',
-		conf.fileStorage.storagePath, 
+		conf.fileStorage.storagePath,
 		path.dirname(__dirname) + '/node_modules/bootstrap/dist/js'
 	],
 
