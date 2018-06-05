@@ -39,7 +39,6 @@ router.get('/:id', function (req, res) {
   locals.section = 'noticia ' + req.params.id;
 
   res.send(locals.section);
-
 });
 
 module.exports = router;
