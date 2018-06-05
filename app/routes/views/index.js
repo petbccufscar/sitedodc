@@ -8,11 +8,16 @@ var moment = require('moment');
 
 // Views
 var areas = require('./areas');
+var noticias = require('./noticias');
 
 // Home
 router.get('/', function (req, res){
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
+
+	// locals.section is used to set the currently selected
+	// item in the header navigation.
+	locals.section = 'home';
 
 	view.on('init', function (next){
 		keystone.list('Evento').model.find().limit(10).sort('dataInicial').select('_id titulo dataInicial').exec(function (err, results){
@@ -48,14 +53,12 @@ router.get('/', function (req, res){
 			next();
 		})
 	});
-	// locals.section is used to set the currently selected
-	// item in the header navigation.
-	locals.section = 'home';
 
 	// Render the view
 	view.render('index');
 });
 
 router.use('/area', areas);
+router.use('/noticias', noticias);
 
 module.exports = router

@@ -1,29 +1,8 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-	{# <header>
-
-		<!-- <img class="logo" src="./images/logos/logo_DC_branco.png" alt=""> -->
-
-		<div class="areas container-fluid">
-			<div class="row text-center">
-				<a href="/area/visitante" id="area_visitante" class="area col">
-					<h4>Área do Visitante</h4>
-				</a>
-				<a href="/area/docente" id="area_docente" class="area col">
-					<h4>Área do Docente</h4>
-				</a>
-				<a href="/area/aluno" id="area_aluno" class="area col">
-					<h4>Área do Aluno</h4>
-				</a>
-			</div>
-		</div>
-	</header> #}
-
 	<main role="main" class="container">
-
 		<div class="row">
-
 			<div class="col-lg-8">
 				<h3>Notícias</h3>
 
@@ -32,17 +11,24 @@
 					{% for noticia in noticias %}
 						<div class="col-md-6 pr-5 mb-5">
 
-								<a href="#" class="noticia-thumbnail border-0">
-									<div class="img-top">
-										<div class="img" style="background-image: url('{{noticia.imagemPrincipal.url}}')"></div>
-									</div>
-									<div class="body">
-										<h4 class="titulo">{{noticia.titulo  | truncate(100, true, "...")}}</h4>
-										<p class="subtitulo">{{noticia.subtitulo | truncate(150, true, "...")}}</p>
-									</div>
-								</a>
+							<a href="#" class="noticia-thumbnail border-0">
+								<div class="img-top">
+									<div class="img" style="background-image: url('{{noticia.imagemPrincipal.url}}')"></div>
+								</div>
+								<div class="body">
+									<h4 class="titulo">{{noticia.titulo  | truncate(100, true, "...")}}</h4>
+									<p class="subtitulo">{{noticia.subtitulo | truncate(150, true, "...")}}</p>
+								</div>
+							</a>
 						</div>
 					{% endfor %}
+
+				</div>
+
+				<div class="row">
+					<div class="col text-center">
+						<a href="/noticias">Ver mais...</a>
+					</div>
 
 				</div>
 			</div>
