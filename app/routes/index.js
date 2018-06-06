@@ -15,6 +15,7 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
+	app.get('/acao', routes.views.alunos_em_acao);
 
 	// Áreas
 	app.get('/area/docente', routes.views.area_docente)
