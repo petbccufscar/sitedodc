@@ -13,17 +13,22 @@ var routes = {
 
 // Setup Route Bindings
 exports = module.exports = function (app) {
+<<<<<<< HEAD
 	// Views
 	app.get('/', routes.views.index);
 	app.get('/acao', routes.views.alunos_em_acao);
+=======
+	// Home
+	app.get('/', routes.views.home.index);
+>>>>>>> fc30542fb9a1a06e05612c2d7ce16da374579d3b
 
 	// Áreas
-	app.get('/area/docente', routes.views.area_docente)
+	app.get('/area/docente', routes.views.area_docente.index)
 
-	app.get('/blog/:category?', routes.views.blog);
-	app.get('/blog/post/:post', routes.views.post);
-	app.get('/gallery', routes.views.gallery);
-	app.all('/contact', routes.views.contact);
+
+	/* Exemplo de páginas com passagem de parâmetros pela url */
+	// app.get('/blog/:category?', routes.views.blog);
+	// app.get('/blog/post/:post', routes.views.post);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

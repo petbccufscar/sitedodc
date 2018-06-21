@@ -1,11 +1,11 @@
 /* Cover section */
-.cover-full {
-    height: 100vh;
-    @include cover-bg();
+.cover-carousel {
+    height: 70vh;
     margin-bottom: 30px;
+    @include cover-bg();
 
     .carousel-item {
-        height: 100vh;
+        height: 60vh;
         min-height: 300px;
         @include cover-bg();
     }
@@ -13,17 +13,18 @@
     .logo {
         position: absolute;
         margin: auto;
-        top: 0;
+        width: 200px;
         right: 0;
-        bottom: 0;
+        bottom: 60vh;
         left: 0;
     }
 
     .carousel-caption {
         text-align: left;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         position: absolute;
         left: 0;
+        z-index: 9999;
         right: auto;
 
         span {
@@ -36,7 +37,7 @@
 .areas{
     background:$black;
     color: $white;
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
 

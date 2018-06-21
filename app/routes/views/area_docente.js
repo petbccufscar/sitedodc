@@ -1,13 +1,11 @@
 var keystone = require('keystone');
 
-exports = module.exports = function (req, res) {
-
+exports.index = function (req, res) {
 	var view = new keystone.View(req, res);
-	var locals = res.locals;
 
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
-	locals.section = 'Área do Docente';
+	res.locals.section = 'Área do Docente';
 
 	// Render the view
 	view.render('area_docente');

@@ -2,44 +2,48 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
- * Enquiry Model
- * =============
+ * Modelo para Mensagem enviada pelo formulário de contato
  */
 
-var Enquiry = new keystone.List('Enquiry', {
+var Mensagem = new keystone.List('Mensagem', {
 	nocreate: true,
 	noedit: true,
+
+	singular: 'mensagem',
+    plural: 'mensagens',
 });
 
-Enquiry.add({
+Mensagem.add({
 	name: { type: Types.Name, required: true },
 	email: { type: Types.Email, required: true },
-	phone: { type: String },
-	enquiryType: { type: Types.Select, options: [
+	
+	// TODO: definir tipos de mensagens
+	tipoDaMensagem: { type: Types.Select, options: [
 		{ value: 'message', label: 'Just leaving a message' },
 		{ value: 'question', label: 'I\'ve got a question' },
 		{ value: 'other', label: 'Something else...' },
 	] },
-	message: { type: Types.Markdown, required: true },
+
+	conteudo: { type: Types.Markdown, required: true },
 	createdAt: { type: Date, default: Date.now },
 });
 
-Enquiry.schema.pre('save', function (next) {
+Mensagem.schema.pre('save', function (next) {
 	this.wasNew = this.isNew;
 	next();
 });
 
-Enquiry.schema.post('save', function () {
+Mensagem.schema.post('save', function () {
 	if (this.wasNew) {
 		this.sendNotificationEmail();
 	}
 });
 
-Enquiry.schema.methods.sendNotificationEmail = function (callback) {
+Mensagem.schema.methods.sendNotificationEmail = function (callback) {
 	if (typeof callback !== 'function') {
 		callback = function (err) {
 			if (err) {
-				console.error('There was an error sending the notification email:', err);
+				console.error('Houve um erro ao enviar a notificação por email:', err);
 			}
 		};
 	}
@@ -49,27 +53,27 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 		return callback(new Error('could not find mailgun credentials'));
 	}
 
-	var enquiry = this;
+	var mensagem = this;
 	var brand = keystone.get('brand');
 
 	keystone.list('User').model.find().where('isAdmin', true).exec(function (err, admins) {
 		if (err) return callback(err);
 		new keystone.Email({
-			templateName: 'enquiry-notification',
+			templateName: 'notificacao-mensagem',
 			transport: 'mailgun',
 		}).send({
 			to: admins,
 			from: {
 				name: 'Site do DC',
-				email: 'contact@site-do-dc.com',
+				email: 'contato@dc.ufscar.com',
 			},
-			subject: 'New Enquiry for Site do DC',
-			enquiry: enquiry,
+			subject: '[Site do DC] Nova mensagem',
+			message: mensagem,
 			brand: brand,
 		}, callback);
 	});
 };
 
-Enquiry.defaultSort = '-createdAt';
-Enquiry.defaultColumns = 'name, email, enquiryType, createdAt';
-Enquiry.register();
+Mensagem.defaultSort = '-createdAt';
+Mensagem.defaultColumns = 'name, email, tipoDaMensagem, createdAt';
+Mensagem.register();

@@ -3,6 +3,9 @@ var keystone = require('keystone');
 var cons = require('consolidate');
 var nunjucks = require('nunjucks');
 
+// Importa configurações
+var conf = require('./conf');
+
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
@@ -12,7 +15,7 @@ keystone.init({
 	'brand': 'Site do DC',
 
 	'sass': 'public',
-	'static': 'public',
+	'static': ['public', conf.fileStorage.storagePath],
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': '.html',
@@ -24,6 +27,8 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+
+	'wysiwyg images': true,
 });
 
 // Load your project's Models
@@ -44,13 +49,11 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
-	posts: ['posts', 'post-categories'],
-	galleries: 'galleries',
-	enquiries: 'enquiries',
+	mensagens: 'Mensagem',
 	users: 'users',
+	eventos: ['Evento', 'CategoriaEvento'],
+	noticias: ['Noticia']
 });
-
-// Start Keystone to connect to your database and initialise the web server
 
 if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 	console.log('----------------------------------------'
