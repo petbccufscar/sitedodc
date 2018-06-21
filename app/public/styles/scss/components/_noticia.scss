@@ -1,0 +1,85 @@
+.noticia-thumbnail {
+  color: $body-color;
+  text-decoration: none;
+
+  .titulo {
+    color: $primary;
+  }
+
+	.img-top {
+    width: 100%;
+    padding-top: 70%;
+    position: relative;
+
+    overflow:hidden;
+
+		.img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      @include cover-bg;
+
+			transition: all 1s ease;
+			-moz-transition: all 1s ease;
+			-ms-transition: all 1s ease;
+			-webkit-transition: all 1s ease;
+			-o-transition: all 1s ease;
+
+		}
+	}
+
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+
+    .titulo {
+      color: $secondary;
+    }
+
+    .img {
+      transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+    }
+  }
+}
+
+
+// #noticias-carousel .carousel-item {
+// 	height: 400px;
+// 	background: no-repeat center center scroll;
+// 	-webkit-background-size: cover;
+// 	-moz-background-size: cover;
+// 	-o-background-size: cover;
+// 	background-size: cover;
+// }
+
+// #noticias-carousel .carousel-caption {
+// 	left: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	text-align: left;
+// 	padding: 10px;
+// 	background: rgba(0,0,0,0.6);
+// 	text-shadow: none;
+// }
+
+// #noticias-thumb > div {
+// 	height: 100px;
+// 	padding: 10px;
+// 	cursor: pointer;
+// }
+//
+// #noticias-thumb > div:hover {
+// 	background: black;
+// }
+//
+// #noticias-thumb .active {
+// 	background: black;
+// 	color: white;
+// }

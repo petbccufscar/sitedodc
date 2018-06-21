@@ -1,6 +1,5 @@
 var keystone = require('keystone');
 var middleware = require('./middleware');
-var importRoutes = keystone.importer(__dirname);
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
@@ -8,11 +7,13 @@ keystone.pre('render', middleware.flashMessages);
 
 // Import Route Controllers
 var routes = {
-	views: importRoutes('./views'),
+	views: require('./views'),
+	api: require('./api')
 };
 
 // Setup Route Bindings
 exports = module.exports = function (app) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 	// Views
 	app.get('/', routes.views.index);
@@ -24,7 +25,11 @@ exports = module.exports = function (app) {
 
 	// Áreas
 	app.get('/area/docente', routes.views.area_docente.index)
+=======
+>>>>>>> adbf0f45fdbaed3eaa501903ec8424cc89a6c9ee
 
+	app.use('/', routes.views);
+	app.use('/api', routes.api);
 
 	/* Exemplo de páginas com passagem de parâmetros pela url */
 	// app.get('/blog/:category?', routes.views.blog);

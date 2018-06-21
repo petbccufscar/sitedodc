@@ -1,0 +1,20 @@
+// Estrutura baseada na arquitetura 7x1 (https://sass-guidelin.es/#architecture)
+
+// Variáveis de estilo
+// Sobrescrevem o default do bootstrap
+@import "scss/helpers/variables";
+
+// Bootstrap
+@import "scss/vendors/bootstrap";
+
+@import "scss/helpers/affix";
+@import "scss/helpers/mixins";
+
+@import "scss/components/evento";
+@import "scss/components/links_rapidos";
+@import "scss/components/noticia";
+
+
+@import "scss/layout/footer";
+@import "scss/layout/header";
+@import "scss/layout/navbar";

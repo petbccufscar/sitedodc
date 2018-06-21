@@ -1,0 +1,19 @@
+nav {
+	a {
+		color: $primary !important;
+		margin-right: 5px;
+		margin-left: 5px;
+
+		&:hover {
+			color: $secondary !important;
+		}
+	}
+
+	.btn {
+		&:hover {
+			background-color: $secondary;
+			color: $white !important;
+			border-color: $secondary;
+		}
+	}
+}
