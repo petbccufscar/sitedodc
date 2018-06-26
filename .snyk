@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.11.0
+version: v1.12.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:braces:20180219':
@@ -78,3 +78,15 @@ patch:
   'npm:qs:20170213':
     - keystone > body-parser > qs:
         patched: '2018-04-26T20:28:39.929Z'
+  'npm:mime:20170907':
+    - keystone > embedly > superagent > mime:
+        patched: '2018-06-26T08:56:41.035Z'
+    - keystone > express > send > mime:
+        patched: '2018-06-26T08:56:41.035Z'
+    - keystone > express > serve-static > send > mime:
+        patched: '2018-06-26T08:56:41.035Z'
+  'npm:tunnel-agent:20170305':
+    - node-sass > request > tunnel-agent:
+        patched: '2018-06-26T08:56:41.035Z'
+    - node-sass-middleware > node-sass > request > tunnel-agent:
+        patched: '2018-06-26T08:56:41.035Z'
