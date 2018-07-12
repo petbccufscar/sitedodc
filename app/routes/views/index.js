@@ -13,6 +13,9 @@ router.use('/area', areas);
 var noticias = require('./noticias');
 router.use('/noticias', noticias);
 
+var acao = require('./alunos_em_acao');
+router.use('/alunos_em_acao', acao);
+
 // Home
 router.get('/', function (req, res){
 	var view = new keystone.View(req, res);
