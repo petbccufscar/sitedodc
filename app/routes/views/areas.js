@@ -35,4 +35,4 @@ router.get('/visitante', function (req, res) {
 	view.render('area_visitante');
 });
 
-module.exports = router
+module.exports = router;
