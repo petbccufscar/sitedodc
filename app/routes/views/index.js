@@ -4,8 +4,6 @@ var async = require('async');
 
 var router = express.Router();
 
-var moment = require('moment');
-
 // Views
 var areas = require('./areas');
 router.use('/area', areas);
@@ -17,7 +15,7 @@ var acao = require('./alunos_em_acao');
 router.use('/alunos_em_acao', acao);
 
 // Home
-router.get('/', function (req, res){
+router.get('/', function (req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 
@@ -25,8 +23,8 @@ router.get('/', function (req, res){
 	// item in the header navigation.
 	locals.section = 'home';
 
-	view.on('init', function (next){
-		keystone.list('Evento').model.find().limit(10).sort('dataInicial').select('_id titulo dataInicial').exec(function (err, results){
+	view.on('init', function (next) {
+		keystone.list('Evento').model.find().limit(10).sort('dataInicial').select('_id titulo dataInicial').exec(function (err, results) {
 			if (err) {
 				return next(err);
 			}
@@ -38,18 +36,18 @@ router.get('/', function (req, res){
 					_id: evento._id,
 					titulo: evento.titulo,
 					data: moment(evento.dataInicial).format('DD/MM'),
-					horario: moment(evento.dataInicial).format('H[h]mm')
+					horario: moment(evento.dataInicial).format('H[h]mm'),
 				});
 
 			}, function (err) {
 				next(err);
 			});
 			next();
-		})
+		});
 	});
 
-	view.on('init', function (next){
-		keystone.list('Noticia').model.find({'status': 'publicado'}).limit(6).sort('dataPublicacao').select('_id titulo subtitulo imagemPrincipal').exec(function (err, results){
+	view.on('init', function (next) {
+		keystone.list('Noticia').model.find({ status: 'publicado' }).limit(6).sort('dataPublicacao').select('_id titulo subtitulo imagemPrincipal dataPublicacao').exec(function (err, results) {
 			if (err) {
 				return next(err);
 			}
@@ -57,11 +55,11 @@ router.get('/', function (req, res){
 			locals.noticias = results;
 
 			next();
-		})
+		});
 	});
 
 	// Render the view
-	view.render('index');
+	view.render('index', { moment: moment });
 });
 
-module.exports = router
+module.exports = router;

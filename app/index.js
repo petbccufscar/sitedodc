@@ -1,13 +1,13 @@
 // Require keystone
 var keystone = require('keystone');
 var cons = require('consolidate');
-var nunjucks = require('nunjucks');
 
 var path = require('path');
 
 // Importa configurações
 var conf = require('./conf');
-
+var moment = require('moment');
+moment.locale('pt-br');
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
@@ -19,12 +19,12 @@ keystone.init({
 	'sass': 'public',
 	'sass options': {
 		includePaths: [path.dirname(__dirname) + '/node_modules'],
-		outputStyle: 'compressed'
+		outputStyle: 'compressed',
 	},
 
 	'static': ['public',
 		conf.fileStorage.storagePath,
-		path.dirname(__dirname) + '/node_modules/bootstrap/dist/js'
+		path.dirname(__dirname) + '/node_modules/bootstrap/dist/js',
 	],
 
 	'favicon': 'public/favicon.ico',
@@ -63,7 +63,7 @@ keystone.set('nav', {
 	mensagens: 'Mensagem',
 	users: 'users',
 	eventos: ['Evento', 'CategoriaEvento'],
-	noticias: ['Noticia']
+	noticias: ['Noticia'],
 });
 
 if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {

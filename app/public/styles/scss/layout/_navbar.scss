@@ -1,8 +1,14 @@
 nav {
-	a {
-		color: $primary !important;
+	li {
 		margin-right: 5px;
 		margin-left: 5px;
+	}
+	i {
+
+		margin-right:5px;
+	}
+	a {
+		color: $primary !important;
 
 		&:hover {
 			color: $secondary !important;
