@@ -3,6 +3,8 @@ var keystone = require('keystone');
 var cons = require('consolidate');
 var nunjucks = require('nunjucks');
 
+var path = require('path');
+
 // Importa configurações
 var conf = require('./conf');
 
@@ -15,7 +17,16 @@ keystone.init({
 	'brand': 'Site do DC',
 
 	'sass': 'public',
-	'static': ['public', conf.fileStorage.storagePath],
+	'sass options': {
+		includePaths: [path.dirname(__dirname) + '/node_modules'],
+		outputStyle: 'compressed'
+	},
+
+	'static': ['public',
+		conf.fileStorage.storagePath,
+		path.dirname(__dirname) + '/node_modules/bootstrap/dist/js'
+	],
+
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': '.html',
