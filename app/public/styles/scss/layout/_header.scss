@@ -46,18 +46,19 @@ header {
 #areas {
 	background: #00000066;
 	color: $white;
+	overflow: hidden;
+
 
 	a {
-		cursor: pointer;
-		padding: 10px;
 		color: $white;
+		line-height: 60px;
+		transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
 
 		&:hover {
 			text-decoration: none;
-		}
-
-		&:hover {
 			background-color: black;
+
 		}
 	}
 }
