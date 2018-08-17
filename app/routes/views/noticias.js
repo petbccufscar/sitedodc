@@ -1,6 +1,9 @@
 var keystone = require('keystone');
 var express = require('express')
 var router = express.Router();
+var moment = require("moment");
+moment.locale('pt-br');
+
 
 router.get('/', function(req, res){
   var view = new keystone.View(req, res);
@@ -24,6 +27,7 @@ router.get('/', function(req, res){
 			locals.noticias = results.results;
       locals.paginas = results.pages;
       locals.pagina_atual = results.currenrPage;
+      locals.moment = moment;
 
 			next();
 		})
