@@ -6,8 +6,7 @@ var path = require('path');
 
 // Importa configurações
 var conf = require('./conf');
-var moment = require('moment');
-moment.locale('pt-br');
+
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.

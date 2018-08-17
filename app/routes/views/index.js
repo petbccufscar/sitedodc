@@ -1,7 +1,8 @@
 var keystone = require('keystone');
 var express = require('express');
 var async = require('async');
-
+var moment = require('moment');
+moment.locale('pt-br');
 var router = express.Router();
 
 // Views
