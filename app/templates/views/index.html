@@ -5,25 +5,23 @@
 		<div class="row">
 			<div class="col-lg-8">
 
-				<h3>Notícias</h3>
+				<h4>Notícias</h4>
 
-				<div class="row mt-3">
-
+				<div class="card-columns">
+	
 					{% for noticia in noticias %}
-						<div class="col-md-6 pr-5 mb-5">
-
-							<a href="#" class="noticia-thumbnail border-0">
-								<div class="img-top">
-									<div class="img" style="background-image: url('{{noticia.imagemPrincipal.url}}')"></div>
-								</div>
-								<div class="body">
-									<h4 class="titulo">{{noticia.titulo  | truncate(100, true, "...")}}</h4>
-									<p class="subtitulo">{{noticia.subtitulo | truncate(150, true, "...")}}</p>
-								</div>
-							</a>
+					<div class="card">
+						<img class="card-img-top" src="{{noticia.imagemPrincipal.url}}" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">{{noticia.titulo | truncate(100, true, "...")}}</h5>
+							<p class="card-text">{{noticia.subtitulo | truncate(150, true, "...")}}</p>
 						</div>
+						<div class="card-footer">
+							<small class="text-muted">{{moment(noticia.dataPublicacao).fromNow()}}</small>
+						</div>
+					</div>
 					{% endfor %}
-
+	
 				</div>
 
 				<div class="row">

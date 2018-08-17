@@ -5,6 +5,7 @@ var async = require('async');
 var router = express.Router();
 
 var moment = require('moment');
+moment.locale('pt-br');
 
 // Views
 var areas = require('./areas');
@@ -61,7 +62,7 @@ router.get('/', function (req, res){
 	});
 
 	// Render the view
-	view.render('index');
+	view.render('index', { moment: moment });
 });
 
 module.exports = router
