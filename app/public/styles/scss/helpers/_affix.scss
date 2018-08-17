@@ -1,0 +1,20 @@
+.affix {
+	z-index: 9990;
+
+	&.navbar {
+		z-index: 9999;
+	}
+}
+
+.affix-sidebar {
+	z-index: 9990;
+
+	@include media-breakpoint-down(sm){
+		top: 0;
+		left: 0;
+		width: 250px !important;
+		.nav {
+			background-color: $white;
+		}
+	}
+}

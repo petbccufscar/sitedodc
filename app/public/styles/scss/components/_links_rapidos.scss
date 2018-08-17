@@ -1,0 +1,23 @@
+.links-rapidos {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
+    .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 60px;
+        margin: 0 10px 10px 0;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba($color: $primary, $alpha: 0.3);
+        overflow: hidden;
+        &:hover {
+            border-color: $secondary;
+        }
+    }
+    .is-two {
+        width: 130px;
+    }
+}

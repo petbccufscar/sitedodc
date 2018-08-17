@@ -1,0 +1,100 @@
+header {
+
+	@include cover-bg();
+	background-image: url("/images/fachada_dc_ufscar.jpg");
+	box-shadow: inset 0 0 0 300px #1A3B54c0; // filtro para deixar a imagem em tom de azul
+
+	#logos {
+		width: 100%;
+		height: 200px;
+
+		img {
+			width: 125px;
+		}
+
+		#departamento {
+			font-size: 25px;
+			color: white;
+			font-weight: $font-weight-black;
+			line-height: 20px;
+		}
+
+		#ufscar {
+			font-size: 22px;
+			color: white;
+			font-weight: $font-weight-normal;
+			line-height: 0;
+		}
+
+		@include media-breakpoint-down(sm) {
+			img {
+				width: 100px;
+			}
+
+			#departamento {
+				font-size: 18px;
+				line-height: 10px;
+			}
+
+			#ufscar {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+#areas {
+	background: #00000066;
+	color: $white;
+	overflow: hidden;
+
+
+	a {
+		color: $white;
+		line-height: 60px;
+		transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+
+		&:hover {
+			text-decoration: none;
+			background-color: black;
+
+		}
+	}
+}
+
+/* Cover section */
+// .cover-carousel {
+// 	height: 70vh;
+// 	margin-bottom: 30px;
+// 	@include cover-bg();
+//
+// 	.carousel-item {
+// 		height: 60vh;
+// 		min-height: 300px;
+// 		@include cover-bg();
+// 	}
+//
+// 	.logo {
+// 		position: absolute;
+// 		margin: auto;
+// 		width: 200px;
+// 		right: 0;
+// 		bottom: 60vh;
+// 		left: 0;
+// 	}
+//
+// 	.carousel-caption {
+// 		text-align: left;
+// 		margin-bottom: 20px;
+// 		position: absolute;
+// 		left: 0;
+// 		z-index: 9999;
+// 		right: auto;
+//
+// 		span {
+// 			background-color: black;
+// 			padding: 15px;
+// 		}
+// 	}
+// }

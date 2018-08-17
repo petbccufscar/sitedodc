@@ -1,0 +1,52 @@
+.event-card {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	
+	.header {
+		text-align: right;
+		padding: 10px;
+		float: left;
+
+		span {
+			display: block;
+			line-height: 1.9rem;
+		}
+
+		.date {
+			font-weight: $font-weight-black;
+			font-size: 1.8rem;
+			color: $primary;
+		}
+
+		.time {
+			font-weight: $font-weight-light;
+			font-size: 1.7rem;
+			color: $secondary;
+		}
+	}
+
+	.body {
+		padding: 10px;
+
+		p {
+			display: table-cell;
+			vertical-align: middle;
+			font-weight: $font-weight-bold;
+			color: $primary;
+			font-size: 1.2rem;
+		}
+	}
+
+	&:hover {
+		background-color: #000;
+
+		.header span{
+			color: white;
+		}
+
+		.body p {
+			color: white;
+		}
+	}
+}
