@@ -1,96 +1,96 @@
 <header class="mb-5">
-	<nav class="navbar navbar-expand-md navbar-light bg-white shadow">
-		<a class="navbar-brand" href="/">
-			<img src="/images/logos/logo_DC.png" width="50" alt="Logo do departamento de computação">
-		</a>
+	<nav class="navbar navbar-expand-md navbar-light bg-white shadow menu-superior">
+		<div class="container">
+			<div class="navbar-brand " href="/">
+				<img src="/images/logos/logo_DC.png" width="50" height="35" alt="Logo do departamento de computação">
+				<div class="logo-texto">
+					Departamento de Computação
+					<span>UFSCar</span></div>
 
-		<ul class="navbar-nav flex-row ml-auto d-flex order-md-last">
+			</div>
 
-			<li class="nav-item border-right d-md-block d-none"></li>
 
-			<li class="nav-item">
-				<a class="nav-link" href="#">
-					<i class="fa fa-search"></i>
-				</a>
-			</li>
+			<button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+			 aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon">
+					<i class="fa fa-navicon"></i>
+				</span>
+			</button>
 
-			<li class="nav-item">
-				<a class="nav-link" href="#">
-					<i class="fa fa-adjust"></i>
-				</a>
-			</li>
+			<div class="collapse navbar-collapse  " id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<!-- Ensino -->
+					<li class="nav-item dropdown">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-graduation-cap"></i>
+							Ensino
+						</a>
 
-			<li class="nav-item">
-				<a class="nav-link" href="#">PT</i>
-				</a>
-			</li>
-		</ul>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Graduação</a>
+							<a class="dropdown-item" href="#">Pós-graduação</a>
+						</div>
+					</li>
 
-		<button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-		 aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon">
-				<i class="fa fa-navicon"></i>
-			</span>
-		</button>
+					<!-- Pesquisa -->
+					<li class="nav-item dropdown">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-book"></i>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav">
-				<!-- Ensino -->
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ensino</a>
 
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="#">Graduação</a>
-						<a class="dropdown-item" href="#">Pós-graduação</a>
-					</div>
-				</li>
+							Pesquisa</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Catálogo</a>
+							<a class="dropdown-item" href="#">Laboratórios</a>
+						</div>
+					</li>
 
-				<!-- Pesquisa -->
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pesquisa</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="#">Catálogo</a>
-						<a class="dropdown-item" href="#">Laboratórios</a>
-					</div>
-				</li>
+					<!-- Extensao -->
+					<li class="nav-item dropdown">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-home"></i>
 
-				<!-- Extensao -->
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Extensão</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="#">Grupos</a>
-						<a class="dropdown-item" href="#">Projetos e ações</a>
-					</div>
-				</li>
 
-				<!-- Pessoas -->
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="pessoas.html" role="button" aria-haspopup="true" aria-expanded="false">Pessoas</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="alunos.html">Alunos</a>
-						<a class="dropdown-item" href="docentes.html">Docentes</a>
-						<a class="dropdown-item" href="funcionarios.html">Funcionários</a>
-						<a class="dropdown-item" href="colaboradores.html">Colaboradores</a>
-					</div>
-				</li>
-				<!-- Institucional -->
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Institucional</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="sobre.html">Sobre</a>
-						<a class="dropdown-item" href="contatos.html">Contato</a>
-					</div>
-				</li>
-			</ul>
+							Extensão</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Grupos</a>
+							<a class="dropdown-item" href="#">Projetos e ações</a>
+						</div>
+					</li>
 
-			<ul class="navbar-nav flex-row ml-auto d-block d-md-flex order-md-last">
+					<!-- Pessoas -->
+					<li class="nav-item dropdown">
+						<a class="nav-link" data-toggle="dropdown" href="pessoas.html" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-users"></i>
 
-				<!-- Suporte -->
-				<li class="nav-item pr-2">
-					<a class="btn btn-outline-primary" href="#">Suporte</a>
-				</li>
-			</ul>
+							Pessoas</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="alunos.html">Alunos</a>
+							<a class="dropdown-item" href="docentes.html">Docentes</a>
+							<a class="dropdown-item" href="funcionarios.html">Funcionários</a>
+							<a class="dropdown-item" href="colaboradores.html">Colaboradores</a>
+						</div>
+					</li>
+					<!-- Institucional -->
+					<li class="nav-item dropdown">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-university"></i>
 
+							Institucional</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="sobre.html">Sobre</a>
+							<a class="dropdown-item" href="contatos.html">Contato</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="#"><i class="fas fa-question-circle"></i>
+
+							Suporte</a>
+					</li>
+				</ul>
+
+
+			</div>
 		</div>
 
 	</nav>
