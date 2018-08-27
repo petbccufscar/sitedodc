@@ -1,19 +1,43 @@
-nav {
-	a {
-		color: $primary !important;
-		margin-right: 5px;
-		margin-left: 5px;
-
-		&:hover {
-			color: $secondary !important;
-		}
-	}
-
-	.btn {
-		&:hover {
-			background-color: $secondary;
-			color: $white !important;
-			border-color: $secondary;
-		}
-	}
+@media screen and (min-width: 1024px) {
+    .menu-superior {
+        height: 100px;
+        .navbar-brand {
+            color: $primary !important;
+            display: inline-flex;
+            height: 100px;
+            flex-direction: row;
+            align-items: center;
+            .logo-texto {
+                margin-left: 20px;
+                font-weight: bold;
+                font-size: 18px;
+                span {
+                    color: #858585;
+                    display: block;
+                    font-weight: normal;
+                    font-size: 14px;
+                }
+            }
+        }
+        .nav-item {
+            text-align: center;
+            font-size: 16px;
+            border-left: 1px solid #d9d9d9;
+            :hover {
+                color: $primary !important;
+            }
+            &:first-of-type {
+                border-left: none !important;
+            }
+            .nav-link {
+                color: #2f2f2f;
+                padding: 0px 20px;
+            }
+            i {
+                display: block;
+                font-size: 20px;
+                margin-bottom: 2px;
+            }
+        }
+    }
 }
