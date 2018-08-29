@@ -9,7 +9,8 @@
 
 				{% for noticia in noticias %}
 				<div class="card">
-					<img class="card-img-top" src="{{noticia.imagemPrincipal.url}}" alt="Card image cap">
+					{% if noticia.imagemPrincipal.url %}
+					<img class="card-img-top" src="{{noticia.imagemPrincipal.url}}" alt="Card image cap"> {% endif %}
 					<div class="card-body">
 						<h5 class="card-title">{{noticia.titulo | truncate(100, true, "...")}}</h5>
 						<p class="card-text">{{noticia.subtitulo | truncate(150, true, "...")}}</p>
