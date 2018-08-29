@@ -54,3 +54,21 @@ nav {
         }
     }
 }
+
+#carrossel {
+    .carousel-caption {
+        bottom: 35%;
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+        * {
+            font-size: 30px !important;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        p {
+            font-weight: bold; //background: rgba(0, 0, 0, 0.5);
+            border-bottom: 3px solid lighten($color: $primary, $amount:20);
+            padding: 2px 10px;
+            margin-left: 5px;
+        }
+    }
+}
