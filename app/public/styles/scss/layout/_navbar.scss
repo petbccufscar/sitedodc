@@ -1,3 +1,7 @@
+nav {
+    transition: all 0.4s ease !important;
+}
+
 @media screen and (min-width: 1024px) {
     .menu-superior {
         height: 100px;
@@ -38,6 +42,15 @@
                 font-size: 20px;
                 margin-bottom: 2px;
             }
+        }
+    }
+    nav.navbar.shrink {
+        height: 60px;
+        i {
+            display: none !important;
+        }
+        .logo-texto {
+            opacity: 0;
         }
     }
 }
