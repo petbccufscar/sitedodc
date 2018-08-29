@@ -1,104 +1,89 @@
-{% extends "layouts/default.html" %}
+{% extends "layouts/default.html" %} {% block content %}
+<main role="main" class="container">
+	<div class="row">
+		<div class="col-lg-8">
 
-{% block content %}
-	<main role="main" class="container">
-		<div class="row">
-			<div class="col-lg-8">
+			<h4>Notícias</h4>
 
-				<h4>Notícias</h4>
+			<div class="card-columns">
 
-				<div class="card-columns">
-	
-					{% for noticia in noticias %}
-					<div class="card">
-						<img class="card-img-top" src="{{noticia.imagemPrincipal.url}}" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">{{noticia.titulo | truncate(100, true, "...")}}</h5>
-							<p class="card-text">{{noticia.subtitulo | truncate(150, true, "...")}}</p>
-						</div>
-						<div class="card-footer">
-							<small class="text-muted">{{moment(noticia.dataPublicacao).fromNow()}}</small>
-						</div>
+				{% for noticia in noticias %}
+				<div class="card">
+					<img class="card-img-top" src="{{noticia.imagemPrincipal.url}}" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">{{noticia.titulo | truncate(100, true, "...")}}</h5>
+						<p class="card-text">{{noticia.subtitulo | truncate(150, true, "...")}}</p>
 					</div>
-					{% endfor %}
-	
+					<div class="card-footer">
+						<small class="text-muted">{{moment(noticia.dataPublicacao).fromNow()}}</small>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+
+			<div class="row">
+				<div class="col text-center">
+					<a href="/noticias">Ver mais...</a>
 				</div>
 
+			</div>
+		</div>
+
+		<div class="col">
+			<div class="border-left pl-3">
+				<h3>Eventos</h3>
+				<div class="row">
+					<div class="col">
+						{% for evento in eventos %}
+						<div class="event-card border-bottom">
+							<div class="header">
+								<span class="date">{{evento.data}}</span>
+								<span class="time">{{evento.horario}}</span>
+							</div>
+							<div class="body">
+								<p>{{evento.titulo}}</p>
+							</div>
+						</div>
+						{% endfor %}
+
+					</div>
+				</div>
 				<div class="row">
 					<div class="col text-center">
 						<a href="/noticias">Ver mais...</a>
 					</div>
 
 				</div>
-			</div>
-
-			<div class="col">
-				<div class="border-left pl-3">
-					<h3>Eventos</h3>
-					<div class="row">
-						<div class="col">
-							{% for evento in eventos %}
-								<div class="event-card border-bottom">
-									<div class="header">
-										<span class="date">{{evento.data}}</span>
-										<span class="time">{{evento.horario}}</span>
-									</div>
-									<div class="body">
-										<p>{{evento.titulo}}</p>
-									</div>
-								</div>
-							{% endfor %}
-
-						</div>
-					</div>
-					<div class="row">
-						<div class="col text-center">
-							<a href="/noticias">Ver mais...</a>
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="border-left pl-3 mt-4">
-					<h3>Links Rápidos</h3>
-					<div class="links-rapidos">
-						<a class="link is-two">
-							<img src="http://www-periodicos-capes-gov-br.ez31.periodicos.capes.gov.br/images/stories/periodicos.png" width="100%" alt="">
-
-						</a>
-
-						<a class="link" href="https://www2.ufscar.br/" target="_blank">
-							<img src="http://ppgcc.dc.ufscar.br/linksrapidos/ufscar2.jpg" alt="">
-						</a>
-
-						<a class="link"></a>
-
-						<a class="link"></a>
-
-						<a class="link"></a>
-
-						<a class="link"></a>
-
-						<a class="link"></a>
-
-					</div>
-				</div>
 
 			</div>
 
-		</main>
-	{% endblock %}
+			<div class="border-left pl-3 mt-4">
+				<h3>Links Rápidos</h3>
+				<div class="links-rapidos">
+					<a class="link is-two">
+						<img src="http://www-periodicos-capes-gov-br.ez31.periodicos.capes.gov.br/images/stories/periodicos.png" width="100%" alt="">
 
-	{# {% block js %}
-		<script>
-			$(document).ready(function () {
-				var noticias_carousel = $('#noticias-carousel');
-				var thumbnails = document.getElementById("noticias-thumb").children;
-				noticias_carousel.on('slide.bs.carousel', function (data) {
-					thumbnails[data.from].classList.remove('active');
-					thumbnails[data.to].classList.add('active');
-				});
-			})
-		</script>
-	{% endblock %} #}
+					</a>
+
+					<a class="link" href="https://www2.ufscar.br/" target="_blank">
+						<img src="http://ppgcc.dc.ufscar.br/linksrapidos/ufscar2.jpg" alt="">
+					</a>
+
+					<a class="link"></a>
+
+					<a class="link"></a>
+
+					<a class="link"></a>
+
+					<a class="link"></a>
+
+					<a class="link"></a>
+
+				</div>
+			</div>
+
+		</div>
+
+</main>
+{% endblock %}
