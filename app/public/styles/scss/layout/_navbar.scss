@@ -4,7 +4,7 @@ nav {
 
 @media screen and (min-width: 1024px) {
     .menu-superior {
-        height: 100px;
+        height: 80px;
         .navbar-brand {
             color: $primary !important;
             display: inline-flex;
@@ -74,7 +74,7 @@ nav {
 }
 
 .barra-topo {
-    line-height: 30px;
+    line-height: 25px;
     background: #262626;
     font-size: 14px;
     color: white;
